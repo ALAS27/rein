@@ -44,11 +44,19 @@
         </audio>
 
         <!-- Muted Video -->
-        <video controls autoplay muted class="vid-1">
+        <video class="vid-1" controls autoplay muted playsinline>
             <source src="oo/document_6262684495120436544.mp4" type="video/mp4">
         </video>
 
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let video = document.querySelector(".vid-1");
+            video.muted = true;
+            video.play();
+        });
+    </script>
 
 </body>
 </html>
