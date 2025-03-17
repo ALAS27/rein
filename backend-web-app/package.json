@@ -1,0 +1,22 @@
+{
+  "name": "backend-web-app",
+  "version": "1.0.0",
+  "description": "A backend web application built with TypeScript.",
+  "main": "src/server.ts",
+  "scripts": {
+    "start": "ts-node src/server.ts",
+    "build": "tsc",
+    "dev": "ts-node-dev src/server.ts"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.9"
+  },
+  "devDependencies": {
+    "typescript": "^4.1.2",
+    "ts-node": "^9.1.1",
+    "ts-node-dev": "^1.0.0"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}

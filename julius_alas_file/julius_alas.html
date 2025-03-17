@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Storage</title>
+    <link rel="stylesheet" href="julius_alas.css">
+</head>
+<body>
+
+    <!-- Logo in the upper-left with a thin black circle -->
+    <div class="logo-container">
+        <img src="logo.png" alt="Logo Not Found" class="logo"> 
+    </div>
+
+    <div class="container">
+        <h1>File Storage</h1>
+
+        <!-- Hidden File Input -->
+        <input type="file" id="fileInput" style="display: none;" onchange="handleFileSelect()">
+        
+        <!-- Upload Button -->
+        <button id="uploadBtn">Upload</button>
+
+        <!-- File List -->
+        <h2>Stored Files</h2>
+        <ul id="fileList"></ul>
+    </div>
+
+    <script src="julius_alas.js"></script>
+</body>
+</html>

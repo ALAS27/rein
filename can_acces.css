@@ -1,0 +1,48 @@
+/* General Styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #121212;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+/* Centering the Text */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Text Styling */
+.letter h1 {
+    font-size: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #ff0000, #ff7300, #ffff00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 2s infinite alternate;
+}
+
+/* Glow Animation */
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #ff0000, 0 0 20px #ff7300, 0 0 30px #ffff00;
+    }
+    to {
+        text-shadow: 0 0 20px #ff7300, 0 0 30px #ffff00, 0 0 40px #ff0000;
+    }
+}
+
+/* Hover Effect */
+.letter h1:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}

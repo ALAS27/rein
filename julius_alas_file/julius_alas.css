@@ -1,0 +1,129 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Small, thin-bordered logo in the upper-left */
+.logo-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.logo {
+    width: 50px; /* Smaller size */
+    height: 50px;
+    border-radius: 50%; /* Circular shape */
+    border: 2px solid black; /* Thin black border */
+    object-fit: cover;
+}
+
+/* Container */
+.container {
+    max-width: 500px;
+    background: white;
+    padding: 20px;
+    margin: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons & Inputs */
+input, button {
+    margin: 10px 0;
+    padding: 10px;
+    width: 90%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* File List */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #eee;
+    padding: 10px;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+/* File Item Layout */
+.file-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/* File Name Link */
+.file-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Keep Buttons in Fixed Position */
+.file-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Rename & Delete Buttons */
+.rename, .delete {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.rename {
+    background: blue;
+    color: white;
+}
+
+.rename:hover {
+    background: darkblue;
+}
+
+.delete {
+    background: red;
+    color: white;
+}
+
+.delete:hover {
+    background: darkred;
+}
+
+/* File Thumbnail */
+.file-thumbnail {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 10px;
+}
