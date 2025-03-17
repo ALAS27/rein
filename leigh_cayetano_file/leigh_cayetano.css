@@ -1,0 +1,47 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #fff; /* Paper color */
+    margin: 0;
+    padding: 20px;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    background: white;
+    padding: 20px;
+    margin: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+h1 {
+    font-family: 'Sacramento', cursive;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+}
+
+/* Image */
+.img-1 {
+    width: 130px;
+    height: 200px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+/* Video */
+.vid-1 {
+    width: 130px;
+    height: 200px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+/* Audio */
+.audio-1 {
+    width: 150px;
+    height: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px pink;
+}
