@@ -1,47 +1,85 @@
 /* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
-    background-color: #fff; /* Paper color */
+    background: url('../rolly and cherry.jpg') no-repeat center center/cover;
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 /* Container */
 .container {
-    max-width: 800px;
-    background: white;
-    padding: 20px;
-    margin: auto;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px; /* Increased size */
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
 }
 
-/* Heading */
+/* Profile Image */
+.img-1 {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Fancy Heading */
 h1 {
     font-family: 'Sacramento', cursive;
-    color: rgb(0, 0, 0);
-    font-size: 24px;
+    color: white;
+    font-size: 28px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
-/* Image */
-.img-1 {
-    width: 130px;
-    height: 200px;
-    box-shadow: 0 0 10px rgb(0, 0, 0);
-}
-
-/* Video */
+/* Video - Reduced size */
 .vid-1 {
-    width: 130px;
-    height: 200px;
-    box-shadow: 0 0 10px rgb(0, 0, 0);
+    width: 100%;
+    max-width: 400px; /* Adjust video size */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Audio */
-.audio-1 {
-    width: 150px;
-    height: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px pink;
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Buttons */
+button {
+    background: #ff4081;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #ff80ab;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
 }

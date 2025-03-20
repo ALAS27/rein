@@ -8,33 +8,35 @@
 </head>
 <body>
 
-    <div class="background"></div>
-
     <div class="container">
-        <div class="letter">
-            <h1>Hi Rolly Mendova</h1>
-        </div>
-
-        <img class="img-1" src="../oo/-Jan Roberts.jpg" alt="Image">
+        <img class="img-1" src="../rolly_mendova_file/profile.jpg" alt="Profile Picture">
+        
+        <h1>Welcome, Rolly Mendova!</h1>
 
         <audio controls autoplay class="audio-1">
-            <source src="../oo/Sagip - Jan Roberts (Lyric Visualizer).mp3" type="audio/mp3">
+            <source src="oo/Sagip - Jan Roberts (Lyric Visualizer).mp3" type="audio/mp3">
         </audio>
 
         <video class="vid-1" controls autoplay muted playsinline>
-            <source src="../oo/document_6262684495120436544.mp4" type="video/mp4">
+            <source src="../rolly_mendova_file/rolly_mendova_vid.mp4" type="video/mp4">
         </video>
 
-        <!-- Button to Join Group Chat -->
-        <button class="chat-button" onclick="joinChat()">Join Group Chat</button>
-
+        <!-- Buttons -->
+        <div class="button-container">
+            <button onclick="openSettings()">Settings</button>
+            <button onclick="joinChat()">Group Chat</button>
+        </div>
     </div>
 
     <script>
         function joinChat() {
-            let username = "rolly_mendova"; // Store username for chat
+            let username = "rolly_mendova";
             localStorage.setItem("chatUser", username);
             window.location.href = "../Group_chat.html";
+        }
+
+        function openSettings() {
+            window.location.href = "../settings.html"; // Link to settings page
         }
     </script>
 
