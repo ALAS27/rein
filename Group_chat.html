@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Chat</title>
+    <link rel="stylesheet" href="group_chat.css">
+</head>
+<body>
+    <div class="chat-container">
+        <h2>Welcome, <span id="chatUser"></span>!</h2>
+        <div id="chat-box"></div>
+
+        <div class="input-area">
+            <input type="text" id="message" placeholder="Type a message..." onkeypress="checkEnter(event)">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+
+        <button class="leave-button" onclick="leaveChat()">Leave Chat</button>
+    </div>
+
+    <script>
+        // Get username from storage
+        let username = localStorage.getItem("chatUser");
+        if (!username) {
+            window.location.href = "login.html"; // Redirect if not logged in
+        } else {
+            document.getElementById("chatUser").innerText = username;
+        }
+
+        // Send message function
+        function sendMessage() {
+            let msgInput = document.getElementById("message");
+            let message = msgInput.value.trim();
+            if (message !== "") {
+                let chatData = JSON.parse(localStorage.getItem("chatMessages")) || [];
+                let timestamp = new Date().toLocaleTimeString();
+                let newMessage = { user: username, text: message, time: timestamp };
+                chatData.push(newMessage);
+                localStorage.setItem("chatMessages", JSON.stringify(chatData));
+                displayMessages();
+                msgInput.value = "";
+            }
+        }
+
+        // Display messages
+        function displayMessages() {
+            let chatBox = document.getElementById("chat-box");
+            let chatData = JSON.parse(localStorage.getItem("chatMessages")) || [];
+            chatBox.innerHTML = ""; 
+            chatData.forEach(msg => {
+                let msgElement = document.createElement("p");
+                msgElement.innerHTML = `<strong>${msg.user}:</strong> ${msg.text} <span class="time">${msg.time}</span>`;
+                chatBox.appendChild(msgElement);
+            });
+            chatBox.scrollTop = chatBox.scrollHeight; 
+        }
+
+        // Enter key to send message
+        function checkEnter(event) {
+            if (event.key === "Enter") {
+                sendMessage();
+            }
+        }
+
+        // Leave chat
+        function leaveChat() {
+            window.location.href = "login.html";
+        }
+
+        // Refresh messages every second
+        setInterval(displayMessages, 1000);
+        displayMessages();
+    </script>
+</body>
+</html>

@@ -3,36 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>leigh_cayetano</title>
-    <link href="rolly_mendova.css" rel="stylesheet" type="text/css">
+    <title>Leigh Cayetano</title>
+    <link href="leigh_cayetano.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
-    <!-- Background -->
     <div class="background"></div>
 
-    <!-- Container -->
     <div class="container">
-        
-        <!-- Letter Content -->
         <div class="letter">
-            <h1>hi bitch</h1>
+            <h1>Hi Leigh Cayetano</h1>
         </div>
 
-        <!-- Image -->
-        <img class="img-1" src="oo/-Jan Roberts.jpg" alt="Image">
+        <img class="img-1" src="../oo/-Jan Roberts.jpg" alt="Image">
 
-        <!-- Audio -->
         <audio controls autoplay class="audio-1">
-            <source src="oo/Sagip - Jan Roberts (Lyric Visualizer).mp3" type="audio/mp3">
+            <source src="../oo/Sagip - Jan Roberts (Lyric Visualizer).mp3" type="audio/mp3">
         </audio>
 
-        <!-- Muted Video -->
         <video class="vid-1" controls autoplay muted playsinline>
-            <source src="oo/document_6262684495120436544.mp4" type="video/mp4">
+            <source src="../oo/document_6262684495120436544.mp4" type="video/mp4">
         </video>
 
+        <!-- Button to Join Group Chat -->
+        <button class="chat-button" onclick="joinChat()">Join Group Chat</button>
+
     </div>
+
+    <script>
+        function joinChat() {
+            let username = "leigh_cayetano"; // Store username for chat
+            localStorage.setItem("chatUser", username);
+            window.location.href = "../Group_chat.html";
+        }
+    </script>
 
 </body>
 </html>
