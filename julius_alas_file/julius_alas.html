@@ -25,8 +25,20 @@
         <!-- File List -->
         <h2>Stored Files</h2>
         <ul id="fileList"></ul>
+
+        <!-- Group Chat Button -->
+        <button class="chat-button" onclick="joinChat()">Join Group Chat</button>
     </div>
 
     <script src="julius_alas.js"></script>
+
+    <script>
+        function joinChat() {
+            let username = "julius_alas"; // Store username for chat
+            localStorage.setItem("chatUser", username);
+            window.location.href = "../Group_chat.html";
+        }
+    </script>
+
 </body>
 </html>
