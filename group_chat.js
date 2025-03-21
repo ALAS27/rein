@@ -30,7 +30,7 @@ function sendMessage() {
     }
 
     let chatBox = document.getElementById("chat-box");
-    let newMessage = `<p><strong>${username}:</strong> ${message}</p>`;
+    let newMessage = `<div class='message'><strong>${username}:</strong> ${message} <span class='time'>${new Date().toLocaleTimeString()}</span></div>`;
 
     // Save message in local storage
     let chatHistory = localStorage.getItem("messages") || "";
@@ -43,12 +43,53 @@ function sendMessage() {
     chatBox.scrollTop = chatBox.scrollHeight;
 }
 
+// Upload media (image/video)
+function uploadFile() {
+    let fileInput = document.getElementById("fileInput");
+    let file = fileInput.files[0];
+
+    if (file) {
+        let reader = new FileReader();
+        reader.onload = function (event) {
+            let fileType = file.type.startsWith("image") ? "image" : "video";
+            let chatBox = document.getElementById("chat-box");
+            let mediaHTML = fileType === "image" ? `<img class='chat-image' src='${event.target.result}'>` : `<video class='chat-video' controls><source src='${event.target.result}' type='video/mp4'></video>`;
+
+            let newMessage = `<div class='message'><strong>${localStorage.getItem("chatUser")}:</strong> ${mediaHTML} <span class='time'>${new Date().toLocaleTimeString()}</span></div>`;
+
+            let chatHistory = localStorage.getItem("messages") || "";
+            chatHistory += newMessage;
+            localStorage.setItem("messages", chatHistory);
+            chatBox.innerHTML += newMessage;
+            chatBox.scrollTop = chatBox.scrollHeight;
+        };
+        reader.readAsDataURL(file);
+    }
+}
+
 // Leave chat and return to user's page
 function leaveChat() {
     let username = localStorage.getItem("chatUser");
     if (username) {
-        window.location.href = username + ".html"; // Redirect back to their personal page
+        window.location.href = username + "_file/" + username + ".html"; // Redirect to user's page
     } else {
         window.location.href = "index.html";
+    }
+}
+
+// Admin options (Julius only)
+function isAdmin() {
+    return localStorage.getItem("chatUser") === "julius_alas";
+}
+
+function bumpMessage() {
+    alert("Message bumped to the top!");
+}
+
+function removeMessage() {
+    let chatBox = document.getElementById("chat-box");
+    if (chatBox.lastChild) {
+        chatBox.removeChild(chatBox.lastChild);
+        localStorage.setItem("messages", chatBox.innerHTML);
     }
 }
