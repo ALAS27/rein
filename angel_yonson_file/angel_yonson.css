@@ -11,8 +11,7 @@ body {
     width: 85%;
     max-width: 1200px;
     height: inherit;
-    margin-top: 20px;
-    margin-left: 150px;
+    margin: auto;
     padding: 30px;
     background: #FCE8ED;
     border-radius: 15px;
