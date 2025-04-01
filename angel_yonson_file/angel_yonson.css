@@ -84,7 +84,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 15px;
-    margin-top: 25px;
+    margin-top: 120px;
 }
 
 audio {
@@ -92,17 +92,3 @@ audio {
     max-width: 400px;
 }
 
-.music-btn {
-    font-size: 24px;
-    padding: 10px;
-    background: white;
-    border: 2px solid black;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.music-btn:hover {
-    background: #FCE8ED;
-    color: #FCE8ED;
-}
