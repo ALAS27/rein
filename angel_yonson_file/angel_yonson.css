@@ -68,8 +68,7 @@ p {
 
 .photo-frame img {
     width: 100%;
-    max-height: 450px;
-    object-fit: cover;
+    max-height: 400px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
