@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #111;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+#desktop-warning {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #ff4d6d;
+    font-weight: bold;
+    border-radius: 5px;
+    z-index: 9999;
+}
+
+#heart-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.heart {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #ff4d6d;
+    transform: rotate(-45deg);
+    animation: floatUp linear infinite;
+    opacity: 0.8;
+}
+
+.heart:before,
+.heart:after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #ff4d6d;
+    border-radius: 50%;
+}
+
+.heart:before {
+    top: -7.5px;
+    left: 0;
+}
+
+.heart:

@@ -62,3 +62,5 @@ function prevSong() {
 
 // Auto-play next song when current ends
 music.addEventListener("ended", nextSong);
+
+// Heart
