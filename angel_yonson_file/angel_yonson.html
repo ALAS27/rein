@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angel Yonson Page</title>
+    <link rel="stylesheet" href="angel_yonson.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="message">
+            Embrace the Moment <br>
+            Cherish the Memories <br>
+            Live the Dream
+        </h1>
+
+        <div class="content">
+            <!-- Photo Section -->
+            <div class="photo-section">
+                
+                <div class="photo-frame">
+                    <div class="photo-slider">
+                        <img id="photo" src="photo (1).jpg" alt="Photo">
+                    </div>
+                </div>
+
+          </div>
+
+            <!-- Video Section -->
+            <div controls autoplay class="video-section">
+                <video id="video" controls>
+                    <source src="video (1).mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+        <!-- Music Controls -->
+        <div class="music-controls">
+            <button class="music-btn" onclick="prevSong()">⏮️</button>
+            <audio id="music" controls>
+                <source src="music.mp3" type="audio/mp3">
+            </audio>
+            <button class="music-btn" onclick="nextSong()">⏭️</button>
+        </div>
+    </div>
+
+    <script src="angel_yonson.js"></script>
+</body>
+</html>

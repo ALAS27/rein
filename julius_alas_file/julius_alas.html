@@ -1,4 +1,31 @@
 <!DOCTYPE html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>julius alas</title>
+    <link href="../ella_baldos_file/ella_baldos.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <div class="container">
+        <img class="img-1" src="../julius_alas_file/profile.jpg" alt="Profile Picture">
+        
+        <h1>Welcome, Julius Alas!</h1>
+
+        <audio controls autoplay class="audio-1">
+            <source src="oo/audio.mp3" type="audio/mp3">
+        </audio>
+
+        <video class="vid-1" controls autoplay muted playsinline>
+            <source src="../ella_baldos_file/ella_video.mp4" type="video/mp4">
+        </video>
+
+</body>
+</html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -37,6 +64,10 @@
             let username = "julius_alas"; // Store username for chat
             localStorage.setItem("chatUser", username);
             window.location.href = "../Group_chat.html";
+        }
+
+        function openSettings() {
+            window.location.href = "../settings.html";
         }
     </script>
 

@@ -2,7 +2,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     text-align: center;
-    background: url('.jpg') no-repeat center center fixed;
+    background: url('../marwin_lapore_file/background_marwin_lapore.jpeg') no-repeat center center fixed;
     background-size: cover;
     margin: 0;
     padding: 0;
@@ -47,7 +47,7 @@ h1 {
 .vid-1 {
     width: 100%;
     max-width: 350px;
-    height: auto;
+    height: 300px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
