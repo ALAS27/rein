@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    position: relative;
+    background-color: white;
+  }
+  
+  /* Create a "footer background" */
+  .footer-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Responsive image */
+  .footer-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Optional: add some padding if you have content */
+  .content {
+    padding-bottom: 300px; /* adjust if needed */
+  }
+  
