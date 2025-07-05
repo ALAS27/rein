@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pick One: Bernadeth or Elieza</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .bernadeth {
+            background-color: #6c5ce7;
+            color: white;
+        }
+        .elieza {
+            background-color: #00b894;
+            color: white;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Pick One:</h2>
+        <button class="bernadeth" onclick="verifyCode('Bernadeth', '070902', 'Maria_bernadeth/Maria_Bernadeth.html')">Bernadeth</button>
+        <button class="elieza" onclick="verifyCode('Elieza', '070903', 'Elieza/Elieza.html')">Elieza</button>
+    </div>
+
+    <script>
+        function verifyCode(name, correctCode, url) {
+            const userCode = prompt(`Enter the code for ${name}:`);
+            if (userCode === null) {
+                return; // User pressed cancel
+            }
+            if (userCode === correctCode) {
+                alert(`Code correct! Redirecting to ${name}...`);
+                window.location.href = url;
+            } else {
+                alert("Incorrect code. Please try again.");
+            }
+        }
+    </script>
+</body>
+</html>
