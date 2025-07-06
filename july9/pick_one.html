@@ -6,28 +6,30 @@
     <title>Pick One: Bernadeth or Elieza</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             height: 100vh;
-            background-color: #f0f0f0;
+            background: linear-gradient(135deg, #f8cdda, #f5f7fa);
+            margin: 0;
         }
         .container {
-            background: white;
+            background: rgba(255, 255, 255, 0.9);
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
             text-align: center;
         }
         button {
             margin: 10px;
-            padding: 10px 20px;
-            font-size: 18px;
+            padding: 15px 25px;
+            font-size: 20px;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
             cursor: pointer;
-            transition: background 0.3s;
+            transition: transform 0.2s, background 0.3s;
         }
         .bernadeth {
             background-color: #6c5ce7;
@@ -38,22 +40,68 @@
             color: white;
         }
         button:hover {
-            opacity: 0.8;
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+        #timer {
+        font-size: 32px;
+        font-weight: bold;
+        color: #d63031;
+        animation: pulse 2s infinite;
+        white-space: nowrap; /* keeps it on one line */
+        text-align: center;
+        display: inline-block; /* ensures consistent centering */
+        max-width: 95vw; /* prevents overflow */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); color: #d63031; }
+            50% { transform: scale(1.05); color: #e17055; }
+            100% { transform: scale(1); color: #d63031; }
+        }
+        h2 {
+            font-size: 28px;
+            color: #2d3436;
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <div id="timer">Loading timer...</div>
         <h2>Pick One:</h2>
-        <button class="bernadeth" onclick="verifyCode('Bernadeth', '070902', 'Maria_bernadeth/Maria_Bernadeth.html')">Bernadeth</button>
-        <button class="elieza" onclick="verifyCode('Elieza', '070903', 'Elieza/Elieza.html')">Elieza</button>
+        <button class="bernadeth" id="bernadethBtn">Bernadeth</button>
+        <button class="elieza" id="eliezaBtn">Elieza</button>
     </div>
 
     <script>
-        function verifyCode(name, correctCode, url) {
+        const startDate = new Date("July 9, 2025 00:00:00").getTime();
+        const endDate = new Date("July 10, 2025 00:00:00").getTime();
+
+        document.getElementById("bernadethBtn").addEventListener("click", function() {
+            checkDateAndVerify("Bernadeth", "070902", "Maria_bernadeth/Maria_Bernadeth.html");
+        });
+        document.getElementById("eliezaBtn").addEventListener("click", function() {
+            checkDateAndVerify("Elieza", "070903", "Elieza/Elieza.html");
+        });
+
+        function checkDateAndVerify(name, correctCode, url) {
+            const now = new Date().getTime();
+
+            if (now < startDate) {
+                alert("Access not yet allowed. You can access on July 9, 2025.");
+                return;
+            }
+
+            if (now >= endDate) {
+                alert("Code entry is now closed. You can no longer access this page.");
+                return;
+            }
+
             const userCode = prompt(`Enter the code for ${name}:`);
             if (userCode === null) {
-                return; // User pressed cancel
+                return; // User cancelled
             }
             if (userCode === correctCode) {
                 alert(`Code correct! Redirecting to ${name}...`);
@@ -62,6 +110,43 @@
                 alert("Incorrect code. Please try again.");
             }
         }
+
+        function updateTimer() {
+            const now = new Date().getTime();
+            let distance, message;
+
+            if (now < startDate) {
+                distance = startDate - now;
+                message = "";
+            } else if (now >= startDate && now < endDate) {
+                distance = endDate - now;
+                message = "Time left before access closes: ";
+            } else {
+                document.getElementById("timer").innerHTML = "🎉 Code entry is now closed! 🎉";
+                document.getElementById("bernadethBtn").disabled = true;
+                document.getElementById("eliezaBtn").disabled = true;
+                document.getElementById("bernadethBtn").style.opacity = 0.5;
+                document.getElementById("eliezaBtn").style.opacity = 0.5;
+                clearInterval(timerInterval);
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            if (message === "") {
+                document.getElementById("timer").innerHTML =
+                    `🎂 Birthday Countdown: ${days}d ${hours}h ${minutes}m ${seconds}s 🎂`;
+            } else {
+                document.getElementById("timer").innerHTML =
+                    `${message}${days}d ${hours}h ${minutes}m ${seconds}s`;
+            }
+        }
+
+        const timerInterval = setInterval(updateTimer, 1000);
+        updateTimer();
     </script>
 </body>
 </html>
