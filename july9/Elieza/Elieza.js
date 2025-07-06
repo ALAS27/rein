@@ -1,11 +1,8 @@
-// Photo Slideshow Logic
-const photos = [
-    "photo (1).jpg", "photo (2).jpg", "photo (3).jpg", "photo (4).jpg",
-    "photo (5).jpg", "photo (6).jpg", "photo (7).jpg", "photo (8).jpg",
-    "photo (9).jpg", "photo (10).jpg", "photo (11).jpg", "photo (12).jpg",
-    "photo (13).jpg", "photo (14).jpg", "photo (15).jpg", "photo (16).jpg",
-    "photo (17).jpg", "photo (18).jpg", "photo (19).jpg", "photo (20).jpg"
-];
+// Photo Slideshow Logic for Ate Elieza (26 photos)
+const photos = [];
+for (let i = 1; i <= 27; i++) {
+    photos.push(`photo (${i}).jpg`);
+}
 
 let currentIndex = 0;
 let slideshowInterval;
@@ -28,19 +25,27 @@ function nextPhoto() {
 }
 
 function startSlideshow() {
-    slideshowInterval = setInterval(nextPhoto, 3000);
+    slideshowInterval = setInterval(nextPhoto, 3000); // 3 seconds per photo
 }
 
 function stopSlideshow() {
     clearInterval(slideshowInterval);
 }
 
-// Auto start on page load
+// Start slideshow on page load
 window.addEventListener("load", () => {
     startSlideshow();
 
-    // Optional: Stop slideshow when hovering over photo to view clearly
+    // Pause slideshow on hover
     const photoElement = document.getElementById("photo");
     photoElement.addEventListener("mouseenter", stopSlideshow);
     photoElement.addEventListener("mouseleave", startSlideshow);
+
+    // Ensure music plays on user interaction if autoplay is blocked
+    const music = document.getElementById("music");
+    window.addEventListener('click', () => {
+        if (music && music.paused) {
+            music.play();
+        }
+    });
 });
