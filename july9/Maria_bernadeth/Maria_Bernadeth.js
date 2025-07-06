@@ -1,6 +1,6 @@
 // Photo Slideshow Logic for Bernadeth (31 photos)
 const photos = [];
-for (let i = 1; i <= 31; i++) {
+for (let i = 1; i <= 32; i++) {
     photos.push(`photo (${i}).jpg`);
 }
 
