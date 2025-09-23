@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Countdown Timer</title>
+<style>
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        margin: 0;
+        background: url("rein/cherry_lising_file/profile.jpg") no-repeat center center fixed;
+        background-size: cover;
+    }
+    .container {
+        background: rgba(255, 255, 255, 0.7);
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        text-align: center;
+        max-width: 95%;
+    }
+    #timer {
+        font-size: clamp(20px, 6vw, 32px);
+        font-weight: bold;
+        color: #d63031;
+        animation: pulse 2s infinite;
+        text-align: center;
+        word-wrap: break-word;
+    }
+    @keyframes pulse {
+        0% { transform: scale(1); color: #d63031; }
+        50% { transform: scale(1.05); color: #e17055; }
+        100% { transform: scale(1); color: #d63031; }
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <div id="timer">Loading timer...</div>
+</div>
+
+<script>
+const startDate = new Date("September 26, 2025 00:00:00").getTime();
+const endDate = new Date("July 10, 3000 00:00:00").getTime();
+
+function updateTimer() {
+    const now = new Date().getTime();
+    let distance, message;
+
+    if (now < startDate) {
+        distance = startDate - now;
+        message = "🎂 Birthday Countdown: ";
+    } else if (now >= startDate && now < endDate) {
+        distance = endDate - now;
+        message = "⏳ Time left before access closes: ";
+    } else {
+        document.getElementById("timer").innerHTML = "🎉 Code entry is now closed! 🎉";
+        clearInterval(timerInterval);
+        return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("timer").innerHTML =
+        `${message}${days}d ${hours}h ${minutes}m ${seconds}s 🎂`;
+}
+
+const timerInterval = setInterval(updateTimer, 1000);
+updateTimer();
+</script>
+</body>
+</html>
