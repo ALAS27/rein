@@ -1,0 +1,781 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
+    <title>Doomsday Countdown - May 11</title>
+    <style>
+      :root {
+        --bg0: #020208;
+        --bg1: #150508;
+        --ash: rgba(255, 255, 255, 0.06);
+        --card: rgba(255, 255, 255, 0.06);
+        --card2: rgba(255, 255, 255, 0.1);
+        --text: rgba(255, 245, 242, 0.92);
+        --muted: rgba(255, 220, 210, 0.62);
+        --shadow: 0 30px 80px rgba(0, 0, 0, 0.65);
+        --ring: rgba(255, 255, 255, 0.14);
+        --hot0: #ff2a2a;
+        --hot1: #ff8a00;
+        --hot2: #ffd36a;
+        --cold: #63b7ff;
+        --danger: rgba(255, 42, 42, 0.9);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+        color: var(--text);
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+          Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        background: radial-gradient(
+            1100px 800px at 30% 20%,
+            rgba(255, 42, 42, 0.22),
+            transparent 60%
+          ),
+          radial-gradient(
+            1200px 900px at 80% 10%,
+            rgba(255, 138, 0, 0.18),
+            transparent 62%
+          ),
+          radial-gradient(
+            900px 700px at 70% 85%,
+            rgba(99, 183, 255, 0.12),
+            transparent 58%
+          ),
+          linear-gradient(180deg, var(--bg0), var(--bg1));
+      }
+
+      .wrap {
+        min-height: 100%;
+        display: grid;
+        place-items: center;
+        padding: 28px 16px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* apocalypse atmosphere layers */
+      .wrap::before,
+      .wrap::after {
+        content: "";
+        position: fixed;
+        inset: -20%;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      /* smoke */
+      .wrap::before {
+        background: radial-gradient(
+            600px 400px at 25% 30%,
+            rgba(255, 138, 0, 0.12),
+            transparent 60%
+          ),
+          radial-gradient(
+            700px 520px at 70% 35%,
+            rgba(255, 42, 42, 0.12),
+            transparent 62%
+          ),
+          radial-gradient(
+            800px 600px at 50% 75%,
+            rgba(255, 211, 106, 0.07),
+            transparent 65%
+          );
+        filter: blur(18px) saturate(120%);
+        opacity: 0.8;
+        animation: drift 16s linear infinite;
+      }
+
+      /* ash + scanlines + vignette */
+      .wrap::after {
+        background: radial-gradient(
+            900px 600px at 50% 30%,
+            rgba(0, 0, 0, 0.3),
+            transparent 62%
+          ),
+          radial-gradient(
+            1200px 900px at 50% 50%,
+            transparent 55%,
+            rgba(0, 0, 0, 0.55)
+          ),
+          repeating-linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.035) 0px,
+            rgba(255, 255, 255, 0.035) 1px,
+            rgba(0, 0, 0, 0) 3px,
+            rgba(0, 0, 0, 0) 6px
+          );
+        mix-blend-mode: overlay;
+        opacity: 0.35;
+        animation: flicker 5.5s infinite steps(2, end);
+      }
+
+      .shell {
+        width: min(900px, 100%);
+        display: grid;
+        gap: 14px;
+        position: relative;
+        z-index: 1;
+      }
+
+      header {
+        display: grid;
+        gap: 10px;
+        text-align: center;
+        padding: 8px 10px;
+      }
+
+      .badge {
+        width: fit-content;
+        margin: 0 auto;
+        padding: 6px 10px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        background: rgba(0, 0, 0, 0.35);
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--muted);
+        backdrop-filter: blur(10px);
+        text-shadow: 0 0 18px rgba(255, 42, 42, 0.25);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(30px, 5vw, 44px);
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        text-shadow: 0 0 26px rgba(255, 42, 42, 0.28),
+          0 0 60px rgba(255, 138, 0, 0.14);
+      }
+
+      .sub {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.4;
+      }
+
+      .card {
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.42), var(--card));
+        box-shadow: var(--shadow);
+        border-radius: 18px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: radial-gradient(
+            800px 240px at 50% -10%,
+            rgba(255, 42, 42, 0.18),
+            transparent 70%
+          ),
+          radial-gradient(
+            900px 380px at 50% 120%,
+            rgba(255, 138, 0, 0.12),
+            transparent 70%
+          );
+        opacity: 0.9;
+        filter: saturate(135%);
+      }
+
+      .cardInner {
+        padding: 18px;
+        display: grid;
+        gap: 14px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .unit {
+        padding: 14px 10px 12px;
+        border-radius: 14px;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.09),
+          rgba(0, 0, 0, 0.35)
+        );
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        transform: translateZ(0);
+      }
+
+      .unit::after {
+        content: "";
+        position: absolute;
+        inset: -60% -40%;
+        background: radial-gradient(
+            240px 160px at 30% 30%,
+            rgba(255, 42, 42, 0.18),
+            transparent 60%
+          ),
+          radial-gradient(
+            260px 170px at 70% 70%,
+            rgba(255, 138, 0, 0.14),
+            transparent 62%
+          );
+        filter: blur(10px);
+        opacity: 0.55;
+        animation: ember 7s linear infinite;
+      }
+
+      .value {
+        font-variant-numeric: tabular-nums;
+        font-feature-settings: "tnum";
+        font-size: clamp(28px, 4.2vw, 44px);
+        font-weight: 800;
+        letter-spacing: -0.04em;
+        position: relative;
+        z-index: 1;
+        text-shadow: 0 0 18px rgba(255, 42, 42, 0.22),
+          0 0 60px rgba(255, 138, 0, 0.12);
+      }
+
+      .label {
+        margin-top: 6px;
+        font-size: 12px;
+        color: var(--muted);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        position: relative;
+        z-index: 1;
+      }
+
+      .statusRow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .pill {
+        padding: 8px 10px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        background: rgba(0, 0, 0, 0.35);
+        color: var(--muted);
+        font-size: 13px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 0 1px rgba(255, 42, 42, 0.06) inset;
+      }
+
+      .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        background: linear-gradient(135deg, var(--hot0), var(--hot1));
+        box-shadow: 0 0 0 6px rgba(255, 42, 42, 0.08),
+          0 0 22px rgba(255, 138, 0, 0.25);
+        animation: pulse 1.4s infinite ease-in-out;
+      }
+
+      .ctaRow {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      button {
+        appearance: none;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        background: rgba(0, 0, 0, 0.28);
+        color: var(--text);
+        padding: 10px 12px;
+        border-radius: 12px;
+        font: inherit;
+        cursor: pointer;
+        transition: transform 120ms ease, background 120ms ease, border 120ms ease;
+        box-shadow: 0 0 0 1px rgba(255, 42, 42, 0.08) inset;
+      }
+
+      button:hover {
+        transform: translateY(-1px);
+        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(255, 255, 255, 0.24);
+      }
+
+      button:active {
+        transform: translateY(0);
+      }
+
+      .ghost {
+        background: transparent;
+      }
+
+      .footer {
+        text-align: center;
+        color: rgba(255, 255, 255, 0.55);
+        font-size: 12px;
+        padding: 6px 10px;
+      }
+
+      /* title glitch */
+      .glitch {
+        position: relative;
+        display: inline-block;
+      }
+
+      .glitch::before,
+      .glitch::after {
+        content: attr(data-text);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        overflow: hidden;
+        opacity: 0.65;
+        pointer-events: none;
+      }
+
+      .glitch::before {
+        transform: translate(2px, 0);
+        color: rgba(255, 42, 42, 0.75);
+        clip-path: inset(0 0 55% 0);
+        animation: glitchTop 2.8s infinite linear alternate-reverse;
+      }
+
+      .glitch::after {
+        transform: translate(-2px, 0);
+        color: rgba(99, 183, 255, 0.55);
+        clip-path: inset(55% 0 0 0);
+        animation: glitchBot 3.2s infinite linear alternate-reverse;
+      }
+
+      /* urgent mode */
+      body.urgent .card {
+        animation: quake 0.7s infinite ease-in-out;
+        box-shadow: 0 30px 120px rgba(255, 42, 42, 0.22), var(--shadow);
+      }
+
+      body.urgent .badge {
+        color: rgba(255, 230, 225, 0.78);
+        border-color: rgba(255, 42, 42, 0.35);
+        box-shadow: 0 0 0 1px rgba(255, 42, 42, 0.12) inset;
+      }
+
+      body.urgent .wrap::after {
+        opacity: 0.5;
+      }
+
+      body.ended .dot {
+        animation: none;
+        background: linear-gradient(135deg, var(--hot2), var(--hot0));
+      }
+
+      @keyframes drift {
+        0% {
+          transform: translate3d(-2%, -1%, 0) rotate(-1deg);
+        }
+        50% {
+          transform: translate3d(2%, 1%, 0) rotate(1deg);
+        }
+        100% {
+          transform: translate3d(-2%, -1%, 0) rotate(-1deg);
+        }
+      }
+
+      @keyframes ember {
+        0% {
+          transform: translate3d(-2%, -1%, 0) rotate(0deg);
+        }
+        100% {
+          transform: translate3d(2%, 1%, 0) rotate(360deg);
+        }
+      }
+
+      @keyframes flicker {
+        0%,
+        100% {
+          opacity: 0.33;
+        }
+        40% {
+          opacity: 0.2;
+        }
+        60% {
+          opacity: 0.48;
+        }
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.18);
+        }
+      }
+
+      @keyframes quake {
+        0% {
+          transform: translate(0, 0) rotate(0deg);
+        }
+        20% {
+          transform: translate(1px, -1px) rotate(-0.1deg);
+        }
+        40% {
+          transform: translate(-1px, 1px) rotate(0.12deg);
+        }
+        60% {
+          transform: translate(1px, 1px) rotate(-0.08deg);
+        }
+        80% {
+          transform: translate(-1px, -1px) rotate(0.1deg);
+        }
+        100% {
+          transform: translate(0, 0) rotate(0deg);
+        }
+      }
+
+      @keyframes glitchTop {
+        0% {
+          clip-path: inset(0 0 55% 0);
+          transform: translate(2px, 0);
+        }
+        10% {
+          clip-path: inset(0 0 35% 0);
+          transform: translate(0px, -1px);
+        }
+        20% {
+          clip-path: inset(0 0 70% 0);
+          transform: translate(3px, 1px);
+        }
+        40% {
+          clip-path: inset(0 0 45% 0);
+          transform: translate(1px, 0px);
+        }
+        60% {
+          clip-path: inset(0 0 60% 0);
+          transform: translate(2px, 1px);
+        }
+        80% {
+          clip-path: inset(0 0 50% 0);
+          transform: translate(0px, 0px);
+        }
+        100% {
+          clip-path: inset(0 0 65% 0);
+          transform: translate(3px, -1px);
+        }
+      }
+
+      @keyframes glitchBot {
+        0% {
+          clip-path: inset(55% 0 0 0);
+          transform: translate(-2px, 0);
+        }
+        12% {
+          clip-path: inset(70% 0 0 0);
+          transform: translate(-1px, 1px);
+        }
+        24% {
+          clip-path: inset(45% 0 0 0);
+          transform: translate(-3px, 0px);
+        }
+        36% {
+          clip-path: inset(62% 0 0 0);
+          transform: translate(-1px, -1px);
+        }
+        52% {
+          clip-path: inset(50% 0 0 0);
+          transform: translate(-2px, 0px);
+        }
+        76% {
+          clip-path: inset(66% 0 0 0);
+          transform: translate(-1px, 1px);
+        }
+        100% {
+          clip-path: inset(58% 0 0 0);
+          transform: translate(-3px, 0px);
+        }
+      }
+
+      @media (max-width: 600px) {
+        .grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation: none !important;
+          transition: none !important;
+          scroll-behavior: auto !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <div class="shell">
+        <header>
+          <div class="badge" id="badge">DOOMSDAY COUNTDOWN</div>
+          <h1 id="title">May 11</h1>
+          <p class="sub" id="subtitle">Loading...</p>
+        </header>
+
+        <section
+          class="card"
+          aria-live="polite"
+          aria-atomic="true"
+          aria-label="Countdown"
+        >
+          <div class="cardInner">
+            <div class="grid" role="group" aria-label="Time remaining">
+              <div class="unit">
+                <div class="value" id="days">0</div>
+                <div class="label">Days</div>
+              </div>
+              <div class="unit">
+                <div class="value" id="hours">00</div>
+                <div class="label">Hours</div>
+              </div>
+              <div class="unit">
+                <div class="value" id="minutes">00</div>
+                <div class="label">Minutes</div>
+              </div>
+              <div class="unit">
+                <div class="value" id="seconds">00</div>
+                <div class="label">Seconds</div>
+              </div>
+            </div>
+
+            <div class="statusRow">
+              <span class="dot" aria-hidden="true"></span>
+              <span class="pill" id="status">Counting down...</span>
+              <span class="pill" id="tz">Asia/Manila</span>
+            </div>
+
+            <div class="ctaRow">
+              <button id="copyLinkBtn" type="button">Copy page link</button>
+              <button class="ghost" id="resetBtn" type="button">Reset</button>
+            </div>
+          </div>
+        </section>
+
+        <div class="footer">
+          Tip: edit the date inside <code>config</code> in this file.
+        </div>
+      </div>
+    </main>
+
+    <script>
+      (() => {
+        // --- Quick edit config ---
+        // Target is May 11 (Asia/Manila). If it's already past May 11 this year,
+        // it will count down to May 11 next year.
+        const config = {
+          monthIndex: 4, // 0=Jan ... 4=May
+          day: 11,
+          hour: 0,
+          minute: 0,
+          second: 0,
+          timeZone: "Asia/Manila",
+          titlePrefix: "May 11",
+        };
+
+        const els = {
+          badge: document.getElementById("badge"),
+          title: document.getElementById("title"),
+          subtitle: document.getElementById("subtitle"),
+          status: document.getElementById("status"),
+          tz: document.getElementById("tz"),
+          days: document.getElementById("days"),
+          hours: document.getElementById("hours"),
+          minutes: document.getElementById("minutes"),
+          seconds: document.getElementById("seconds"),
+          copyLinkBtn: document.getElementById("copyLinkBtn"),
+          resetBtn: document.getElementById("resetBtn"),
+        };
+
+        const pad2 = (n) => String(n).padStart(2, "0");
+
+        const getNowInManilaParts = () => {
+          // Manila is UTC+8 with no DST. Convert "now" into Manila calendar parts.
+          const now = new Date();
+          const nowUtcMs = now.getTime() + now.getTimezoneOffset() * 60 * 1000;
+          const manila = new Date(nowUtcMs + 8 * 60 * 60 * 1000);
+          return {
+            year: manila.getUTCFullYear(),
+            monthIndex: manila.getUTCMonth(),
+            day: manila.getUTCDate(),
+          };
+        };
+
+        const buildTargetDateUtc = (year) => {
+          // Create a Date that represents the Manila moment, but stored as UTC ms.
+          // Manila midnight = UTC time minus 8 hours.
+          const utcMs =
+            Date.UTC(
+              year,
+              config.monthIndex,
+              config.day,
+              config.hour,
+              config.minute,
+              config.second
+            ) -
+            8 * 60 * 60 * 1000;
+          return new Date(utcMs);
+        };
+
+        const computeTarget = () => {
+          const nowManila = getNowInManilaParts();
+          let year = nowManila.year;
+
+          const isAfterThisYearsMay11 =
+            nowManila.monthIndex > config.monthIndex ||
+            (nowManila.monthIndex === config.monthIndex &&
+              nowManila.day > config.day);
+
+          if (isAfterThisYearsMay11) year += 1;
+
+          return buildTargetDateUtc(year);
+        };
+
+        const formatInTz = (date, timeZone) => {
+          try {
+            return new Intl.DateTimeFormat(undefined, {
+              timeZone,
+              dateStyle: "full",
+              timeStyle: "short",
+            }).format(date);
+          } catch {
+            // Fallback if timeZone is unsupported.
+            return new Intl.DateTimeFormat(undefined, {
+              dateStyle: "full",
+              timeStyle: "short",
+            }).format(date);
+          }
+        };
+
+        const setUiForTarget = (target) => {
+          els.tz.textContent = config.timeZone;
+          const year = new Intl.DateTimeFormat(undefined, {
+            timeZone: config.timeZone,
+            year: "numeric",
+          }).format(target);
+
+          const titleText = `${config.titlePrefix}, ${year}`;
+          els.title.textContent = titleText;
+          els.title.classList.add("glitch");
+          els.title.setAttribute("data-text", titleText);
+          els.subtitle.textContent = `Target: ${formatInTz(
+            target,
+            config.timeZone
+          )} (${config.timeZone})`;
+        };
+
+        const updateCountdown = (target) => {
+          const now = Date.now();
+          const diffMs = target.getTime() - now;
+          const ended = diffMs <= 0;
+
+          const clampedMs = Math.max(0, diffMs);
+          const totalSeconds = Math.floor(clampedMs / 1000);
+
+          const days = Math.floor(totalSeconds / 86400);
+          const hours = Math.floor((totalSeconds % 86400) / 3600);
+          const minutes = Math.floor((totalSeconds % 3600) / 60);
+          const seconds = totalSeconds % 60;
+
+          els.days.textContent = String(days);
+          els.hours.textContent = pad2(hours);
+          els.minutes.textContent = pad2(minutes);
+          els.seconds.textContent = pad2(seconds);
+
+          document.body.classList.toggle("ended", ended);
+
+          // Escalate intensity as we approach zero.
+          const urgent =
+            totalSeconds <= 6 * 60 * 60 || // last 6 hours
+            (days === 0 && hours === 0 && minutes <= 30); // last 30 minutes (extra)
+          document.body.classList.toggle("urgent", !ended && urgent);
+
+          if (ended) {
+            els.badge.textContent = "THE DAY HAS COME";
+            els.status.textContent = "It's May 11.";
+          } else if (urgent) {
+            els.badge.textContent = "FINAL HOURS";
+            els.status.textContent = "The world feels... unstable.";
+          } else {
+            els.badge.textContent = "DOOMSDAY COUNTDOWN";
+            els.status.textContent = "Counting down...";
+          }
+          return ended;
+        };
+
+        const copyPageLink = async () => {
+          try {
+            await navigator.clipboard.writeText(window.location.href);
+            els.copyLinkBtn.textContent = "Copied!";
+            setTimeout(() => {
+              els.copyLinkBtn.textContent = "Copy page link";
+            }, 1200);
+          } catch {
+            els.copyLinkBtn.textContent = "Copy failed";
+            setTimeout(() => {
+              els.copyLinkBtn.textContent = "Copy page link";
+            }, 1200);
+          }
+        };
+
+        let target = computeTarget();
+        setUiForTarget(target);
+        updateCountdown(target);
+
+        let timer = null;
+        const start = () => {
+          if (timer) clearInterval(timer);
+          timer = setInterval(() => {
+            const ended = updateCountdown(target);
+            if (ended && timer) {
+              clearInterval(timer);
+              timer = null;
+            }
+          }, 250);
+        };
+
+        const reset = () => {
+          target = computeTarget();
+          setUiForTarget(target);
+          updateCountdown(target);
+          start();
+        };
+
+        els.copyLinkBtn.addEventListener("click", copyPageLink);
+        els.resetBtn.addEventListener("click", reset);
+
+        // Keep it accurate if the tab sleeps and wakes up.
+        document.addEventListener("visibilitychange", () => {
+          if (document.visibilityState === "visible") reset();
+        });
+
+        start();
+      })();
+    </script>
+  </body>
+</html>
