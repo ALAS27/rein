@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Angel Faith</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="intro" id="intro">
+    <div class="intro-photo" aria-hidden="true"></div>
+    <div class="intro-content">
+      <p class="eyebrow">May 17, 2026</p>
+      <h1>For Angel Faith</h1>
+      <p class="intro-copy">A small birthday page, rebuilt with more memories, softer motion, and a little more heart.</p>
+      <button class="primary-btn" id="startBtn" type="button">Open</button>
+      <div class="countdown-panel" id="countdownPanel" aria-live="polite">
+        <p class="section-kicker">Not yet</p>
+        <h2>Come back when it is Angel's birthday.</h2>
+        <div class="countdown-grid">
+          <span><strong id="daysLeft">00</strong>Days</span>
+          <span><strong id="hoursLeft">00</strong>Hours</span>
+          <span><strong id="minutesLeft">00</strong>Minutes</span>
+          <span><strong id="secondsLeft">00</strong>Seconds</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="page" id="page">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-media">
+        <img src="photo (8).jpg" alt="Angel Faith birthday memory">
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow" id="dateLabel">Birthday note</p>
+        <h1 id="hero-title">Happy 19th Birthday, Angel Faith</h1>
+        <p id="dayMessage">This one is saved for your Sunday celebration.</p>
+      </div>
+    </section>
+
+    <section class="letter" aria-label="Birthday letter">
+      <p class="section-kicker">Letter</p>
+      <div class="letter-body">
+        <p>Dear ate Indel, happy 19th birthday. I wanted this message to sound formal enough for the occasion, but still honest enough to feel like me, so please accept this carefully prepared birthday speech with a small amount of emotional damage.</p>
+        <p>It is funny how fast time moves. One moment, the memories are just normal days: laughing over random things, talking about crushes like they were breaking news, and spending time around Children's Ministry. Then suddenly, those same moments become the kind of memories you look back on and quietly smile about.</p>
+        <p>I hope you know that you are appreciated not only for the big things people notice, but also for the small things that make you you. Your kindness, your faith, your strength, and even your very specific way of making ordinary moments more entertaining all matter more than you probably realize.</p>
+        <p>This year, I pray that God gives you peace when life feels loud, courage when things feel uncertain, and joy that stays even in simple days. May your prayers be answered in ways that surprise you, and may every delay eventually make sense in the most beautiful way.</p>
+        <p>Keep growing, keep dreaming, and keep becoming the person God is shaping you to be. We are proud of you, ate Indel. And yes, this is your reminder that you are loved, prayed for, and celebrated today, even if this website is doing most of the dramatic work.</p>
+      </div>
+      <blockquote>
+        "For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you, plans to give you hope and a future."
+        <span>Jeremiah 29:11</span>
+      </blockquote>
+    </section>
+
+    <section class="showcase" aria-labelledby="showcase-title">
+      <div class="section-heading">
+        <p class="section-kicker">Memories</p>
+        <h2 id="showcase-title">A little gallery for the day</h2>
+      </div>
+      <div class="carousel">
+        <button class="icon-btn" id="prevPhoto" type="button" aria-label="Previous photo">‹</button>
+        <figure class="feature-photo">
+          <img id="activePhoto" src="photo (1).jpg" alt="Birthday slideshow photo">
+          <figcaption id="caption">Memory 1 of 17</figcaption>
+        </figure>
+        <button class="icon-btn" id="nextPhoto" type="button" aria-label="Next photo">›</button>
+      </div>
+      <div class="thumb-grid" id="thumbGrid" aria-label="Photo thumbnails"></div>
+    </section>
+
+    <section class="videos" aria-labelledby="videos-title">
+      <div class="section-heading">
+        <p class="section-kicker">Clips</p>
+        <h2 id="videos-title">Press play when you are ready</h2>
+      </div>
+      <div class="video-grid">
+        <video controls preload="metadata">
+          <source src="video (1).mp4" type="video/mp4">
+        </video>
+      </div>
+    </section>
+
+    <section class="finale" aria-labelledby="finale-title">
+      <div>
+        <p class="section-kicker">Contact QR</p>
+        <h2 id="finale-title">Scan for help or contact details.</h2>
+        <ul class="contact-list" aria-label="Contact details">
+          <li><span>Phone</span><a href="tel:09957811449">09957811449</a></li>
+          <li><span>Facebook</span><a href="https://www.facebook.com/julius.alas.2024/">julius.alas.2024</a></li>
+          <li><span>Instagram</span><a href="https://www.instagram.com/jga.03.06/">@jga.03.06</a></li>
+          <li><span>Telegram</span><a href="https://t.me/Julius_alas">@Julius_alas</a></li>
+        </ul>
+      </div>
+      <a class="qr-link" href="contact.html" aria-label="Open contact page">
+        <img src="contact_qr.png" alt="Contact QR code">
+      </a>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
