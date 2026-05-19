@@ -173,3 +173,7 @@ document.getElementById("startBtn").addEventListener("click", () => {
   countdownPanel.classList.add("is-visible");
   document.getElementById("intro").classList.add("is-countdown");
 });
+
+if (isBirthdayUnlocked()) {
+  window.setTimeout(openMainPage, 150);
+}
