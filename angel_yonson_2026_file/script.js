@@ -3,7 +3,6 @@ const today = new Date();
 const oneDay = 24 * 60 * 60 * 1000;
 const dayDiff = Math.floor((birthday.setHours(0, 0, 0, 0) - today.setHours(0, 0, 0, 0)) / oneDay);
 const birthdayStart = new Date("2026-05-17T00:00:00+08:00");
-const birthdayEnd = new Date("2026-05-18T00:00:00+08:00");
 
 const dateLabel = document.getElementById("dateLabel");
 const dayMessage = document.getElementById("dayMessage");
@@ -58,7 +57,7 @@ function restartSlideshow() {
 
 function isBirthdayUnlocked() {
   const now = new Date();
-  return now >= birthdayStart && now < birthdayEnd;
+  return now >= birthdayStart;
 }
 
 function updateCountdown() {
