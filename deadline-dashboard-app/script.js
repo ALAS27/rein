@@ -2,76 +2,9 @@ const STORAGE_KEY = "deadline-hub-items-v1";
 const DELETED_KEY = "deadline-hub-deleted-items-v1";
 const BIR_TAX_REMINDER_URL = "https://www.bir.gov.ph/tax-reminder";
 
-const seedItems = [
-  {
-    id: crypto.randomUUID(),
-    title: "BIR Form 1600-WP",
-    owner: "Julius",
-    due: "2026-05-20",
-    status: "Incomplete",
-    source: "https://www.bir.gov.ph/tax-reminder",
-    details: "Remittance return for percentage tax on winnings and prizes withheld by race track operators. Period: April 2026.",
-    tags: ["BIR", "Payment", "April 2026"],
-  },
-  {
-    id: crypto.randomUUID(),
-    title: "VAT / Percentage Tax",
-    owner: "Julius",
-    due: "2026-05-25",
-    status: "Working",
-    source: "https://www.bir.gov.ph/tax-reminder",
-    details: "BIR Forms 2550Q, 2551Q, 2550-DS and related quarterly submissions. Fiscal quarter ending April 30, 2026.",
-    tags: ["BIR", "VAT", "Quarterly"],
-  },
-  {
-    id: crypto.randomUUID(),
-    title: "eAFS / 1702Q / ORUS",
-    owner: "Julius",
-    due: "2026-05-30",
-    status: "Approval",
-    source: "https://www.bir.gov.ph/tax-reminder",
-    details: "AFS attachments, eAFS, inventory schedules, SAWT, 1702Q, and computerized books registration.",
-    tags: ["BIR", "AFS", "ORUS"],
-  },
-  {
-    id: crypto.randomUUID(),
-    title: "HDMF Contribution",
-    owner: "Julius",
-    due: "2026-06-11",
-    status: "Done",
-    source: "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-june-tax-calendar.html",
-    details: "Remittance of HDMF contributions for May 2026 by employers whose names begin with letters A to D.",
-    tags: ["HDMF", "Monthly"],
-  },
-  {
-    id: crypto.randomUUID(),
-    title: "SEC AFS Filing",
-    owner: "Julius",
-    due: "2026-06-15",
-    status: "Incomplete",
-    source: "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-june-tax-calendar.html",
-    details: "Filing with the SEC of AFS and annual report items for relevant year-end schedules.",
-    tags: ["SEC", "AFS"],
-  },
-];
+const seedItems = [];
 
-let calendarEvents = [
-  ["BIR Tax Reminder - May 19, 2026", "2026-05-19T08:00:00+08:00", "PwC May calendar", "SUBMISSION: CETI application of RBEs to IPAs for YE 30 April 2026. HDMF REMITTANCE: April 2026 contributions for employers E to L.", "https://www.google.com/calendar/event?eid=N3V2a3RsNWNjYTF2bWZsNHRlcjFtZmd2YjgganVsaXVzYWxhczEwQG0&ctz=Asia/Manila"],
-  ["BIR Tax Reminder - May 20, 2026", "2026-05-20T08:00:00+08:00", "BIR official", "e-FILING & PAYMENT: BIR Form 1600 WP for April 2026.", "https://www.google.com/calendar/event?eid=cXQxODN0NGhhamd2MWY4Ymw5cWt0OGtpajAganVsaXVzYWxhczEwQG0&ctz=Asia/Manila"],
-  ["BIR Tax Reminder - May 22, 2026", "2026-05-22T08:00:00+08:00", "PwC May calendar", "HDMF REMITTANCE: April 2026 contributions for employers M to Q.", "https://www.google.com/calendar/event?eid=cjViNmxpMzhsZTZuNXU4NzZsM2txbzMyMmcganVsaXVzYWxhczEwQG0&ctz=Asia/Manila"],
-  ["BIR Tax Reminder - May 25, 2026", "2026-05-25T08:00:00+08:00", "BIR official", "SUBMISSION plus e-FILING & PAYMENT: quarterly VAT, percentage tax, and related April 30, 2026 fiscal quarter requirements.", "https://www.google.com/calendar/event?eid=MThodXY1Z3M3aGZ1Y3U4ZWM1YmRhdW0wcmMganVsaXVzYWxhczEwQG0&ctz=Asia/Manila"],
-  ["BIR Tax Reminder - May 29, 2026", "2026-05-29T08:00:00+08:00", "PwC May calendar", "SUBMISSION: forex-rate sworn statement. HDMF REMITTANCE: April 2026 contributions for employers R to Z or numeral.", "https://www.google.com/calendar/event?eid=NHAwOGpvY25oMnI1aGhlYW0xOGZvZm1uMWsganVsaXVzYWxhczEwQG0&ctz=Asia/Manila"],
-  ["BIR Tax Reminder - May 30, 2026", "2026-05-30T08:00:00+08:00", "BIR official", "SUBMISSION, e-SUBMISSION, e-FILING & PAYMENT, and ORUS registration items including AFS, 1702Q, SAWT, inventory schedules, and computerized books.", "https://www.google.com/calendar/event?eid=dWpnNmVhaHA3bXJtZTgxc2ZlMDA1czJ1ZzAganVsaXVzYWxhczEwQG0&ctz=Asia/Manila"],
-  ["BIR Tax Reminder - June 1, 2026", "2026-06-01T08:00:00+08:00", "PwC June calendar", "SEC filing, e-FILING & PAYMENT, submissions, SSS remittance, books, inventory, and related quarter/year-end requirements.", "https://www.google.com/calendar/event?eid=ZGJrZnF0bnVsN2NhdmF0MTFuanI4cXV1YW8ganVsaXVzYWxhczEwQG0&ctz=Asia/Manila"],
-  ["Happy birthday!", "2026-06-03T00:00:00", "Google Calendar", "All-day calendar event.", "https://www.google.com/calendar/event?eid=cWppbmdjNWJmOXZvajYxbHU2azJncDU4aGNfMjAyNjA2MDMganVsaXVzYWxhczEwQG0&ctz=Asia/Manila"],
-  ["BIR Tax Reminder - June 5, 2026", "2026-06-05T08:00:00+08:00", "PwC June calendar", "e-FILING & PAYMENT: BIR Form 2000 DST for May 2026.", "https://www.google.com/calendar/event?eid=cWZvMmtudGYzZDNmbW42NDk5ZTVubWd0MDQganVsaXVzYWxhczEwQG0&ctz=Asia/Manila"],
-  ["BIR Tax Reminder - June 8, 2026", "2026-06-08T08:00:00+08:00", "PwC June calendar", "e-SUBMISSION: sales report using CRM/POS and similar sales machines, TIN ending even number, for May 2026.", "https://www.google.com/calendar/event?eid=OXZpYzluMmc5bHZlbW1kbGRlNjlncXZhODQganVsaXVzYWxhczEwQG0&ctz=Asia/Manila"],
-  ["BIR Tax Reminder - June 10, 2026", "2026-06-10T08:00:00+08:00", "PwC June calendar", "FILING & PAYMENT, e-FILING & PAYMENT, e-SUBMISSION, and issuance items for May 2026 withholding and sales reports.", "https://www.google.com/calendar/event?eid=Y2UzbGFhYWs0NzI0b3Fvb3BzNGZ2MW42dWcganVsaXVzYWxhczEwQG0&ctz=Asia/Manila"],
-  ["BIR Tax Reminder - June 11, 2026", "2026-06-11T08:00:00+08:00", "PwC June calendar", "e-FILING: WTC/EWT/FWT Group E. HDMF REMITTANCE: May 2026 contributions for employers A to D.", "https://www.google.com/calendar/event?eid=OGJqNTk2M3MwN2FzOTJjMms0NGhlcG9pMDAganVsaXVzYWxhczEwQG0&ctz=Asia/Manila"],
-  ["BIR Tax Reminder - June 15, 2026", "2026-06-15T08:00:00+08:00", "PwC June calendar", "SEC filing, e-FILING, e-PAYMENT, e-FILING & PAYMENT, submissions, PHIC, and HDMF items.", "https://www.google.com/calendar/event?eid=M3FjY2xsb3Y2ZGc3M3NwOWRvcmtyNjM1cGMganVsaXVzYWxhczEwQG0&ctz=Asia/Manila"],
-  ["My Love birthday day", "2026-07-09T00:00:00", "Google Calendar", "All-day calendar event.", "https://www.google.com/calendar/event?eid=YzhxNmNwYjQ2c3AzZ2JiNTcwczNhYjlrNjBzbTZiOXA2c3E2YWI5ZzZwaWplZHBpYzVobWFvcGo2b18yMDI2MDcwOSBqdWxpdXNhbGFzMTBAbQ&ctz=Asia/Manila"],
-  ["Scout months", "2026-10-01T00:00:00", "Google Calendar", "All-day calendar event.", "https://www.google.com/calendar/event?eid=YzloM2FvaGpjaGk2NmI5aDY4c2oyYjlrNnBnajJiOXA2Z3AzMGJiNmM1aDY0b3BpYzhvajRkaGc2a18yMDI2MTAwMSBqdWxpdXNhbGFzMTBAbQ&ctz=Asia/Manila"],
-].map(([title, start, source, details, url]) => ({ title, start, source, details, url }));
+let calendarEvents = [];
 
 let items = loadItems();
 let deletedIds = loadDeletedIds();
@@ -224,11 +157,16 @@ function daysLeft(value) {
   return Math.ceil((due - today) / 86400000);
 }
 
+function isIncomingDate(value) {
+  return daysLeft(value) >= 0;
+}
+
 function filteredItems() {
   const q = searchInput.value.trim().toLowerCase();
   const status = statusFilter.value;
   const month = monthFilter.value;
   return items
+    .filter((item) => isIncomingDate(item.due))
     .filter((item) => status === "All" || item.status === status)
     .filter((item) => month === "All" || item.due.startsWith(month))
     .filter((item) => {
@@ -239,14 +177,15 @@ function filteredItems() {
 }
 
 function renderStats(currentItems) {
-  const week = currentItems.filter((item) => {
+  const incomingItems = currentItems.filter((item) => isIncomingDate(item.due));
+  const week = incomingItems.filter((item) => {
     const left = daysLeft(item.due);
     return left >= 0 && left <= 7 && item.status !== "Done";
   }).length;
-  document.querySelector("#totalCount").textContent = currentItems.length;
+  document.querySelector("#totalCount").textContent = incomingItems.length;
   document.querySelector("#weekCount").textContent = week;
-  document.querySelector("#approvalCount").textContent = currentItems.filter((item) => item.status === "Approval").length;
-  document.querySelector("#doneCount").textContent = currentItems.filter((item) => item.status === "Done").length;
+  document.querySelector("#approvalCount").textContent = incomingItems.filter((item) => item.status === "Approval").length;
+  document.querySelector("#doneCount").textContent = incomingItems.filter((item) => item.status === "Done").length;
 }
 
 function render() {
@@ -299,12 +238,15 @@ function rowTemplate(item) {
 }
 
 function renderCalendar() {
-  const months = ["All", ...new Set(calendarEvents.map((event) => monthKey(event.start)))];
+  const incomingEvents = calendarEvents.filter((event) => isIncomingDate(event.start.slice(0, 10)));
+  const months = ["All", ...new Set(incomingEvents.map((event) => monthKey(event.start)))];
   calendarMonthTabs.innerHTML = months
     .map((month) => `<button class="${month === activeCalendarMonth ? "active" : ""}" data-calendar-month="${month}">${month === "All" ? "All" : monthLabel(month)}</button>`)
     .join("");
 
-  const visible = calendarEvents
+  if (activeCalendarMonth !== "All" && !months.includes(activeCalendarMonth)) activeCalendarMonth = "All";
+
+  const visible = incomingEvents
     .filter((event) => activeCalendarMonth === "All" || monthKey(event.start) === activeCalendarMonth)
     .sort((a, b) => new Date(a.start) - new Date(b.start));
 
