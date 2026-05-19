@@ -176,6 +176,20 @@
       </form>
     </dialog>
 
+    <dialog id="confirmDialog">
+      <form method="dialog" class="confirm-card">
+        <div class="confirm-icon">!</div>
+        <div>
+          <h2>Remove deadline?</h2>
+          <p id="confirmMessage">This deadline will be removed from your tracker.</p>
+        </div>
+        <div class="confirm-actions">
+          <button value="cancel" class="ghost">Keep</button>
+          <button id="confirmRemove" value="default" class="danger-save">Remove</button>
+        </div>
+      </form>
+    </dialog>
+
     <script src="./tax-calendar-data.js"></script>
     <script src="./script.js"></script>
     <script src="./firebase-config.js"></script>

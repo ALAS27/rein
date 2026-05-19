@@ -77,6 +77,7 @@ let items = loadItems();
 let deletedIds = loadDeletedIds();
 let activeCalendarMonth = "All";
 let currentPage = 1;
+let pendingRemoveId = "";
 
 const rows = document.querySelector("#deadlineRows");
 const searchInput = document.querySelector("#searchInput");
@@ -85,6 +86,9 @@ const monthFilter = document.querySelector("#monthFilter");
 const clearFilters = document.querySelector("#clearFilters");
 const pageSize = document.querySelector("#pageSize");
 const editor = document.querySelector("#editor");
+const confirmDialog = document.querySelector("#confirmDialog");
+const confirmMessage = document.querySelector("#confirmMessage");
+const confirmRemove = document.querySelector("#confirmRemove");
 const calendarRows = document.querySelector("#calendarRows");
 const calendarMonthTabs = document.querySelector("#calendarMonthTabs");
 const pageInfo = document.querySelector("#pageInfo");
@@ -386,14 +390,28 @@ function safeSelector(value) {
 function removeItem(id) {
   const item = items.find((entry) => entry.id === id);
   if (!item) return;
-  const ok = confirm(`Remove "${item.title}" from the tracker?`);
-  if (!ok) return;
+  pendingRemoveId = id;
+  confirmMessage.textContent = `"${item.title}" will be removed from your tracker. You can add it again later if needed.`;
+  confirmDialog.showModal();
+}
+
+function confirmRemoveItem() {
+  const id = pendingRemoveId;
+  const item = items.find((entry) => entry.id === id);
+  pendingRemoveId = "";
+  if (!item) return;
   items = items.filter((entry) => entry.id !== id);
   if (!deletedIds.includes(id)) deletedIds.push(id);
   saveDeletedIds();
   saveItems();
   render();
 }
+
+confirmRemove.addEventListener("click", (event) => {
+  event.preventDefault();
+  confirmDialog.close();
+  confirmRemoveItem();
+});
 
 function updateItem(id, changes) {
   const item = items.find((entry) => entry.id === id);

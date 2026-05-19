@@ -151,7 +151,8 @@ h1 {
 }
 
 .add-button,
-.save {
+.save,
+.danger-save {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -164,6 +165,11 @@ h1 {
   font-weight: 700;
   cursor: pointer;
   box-shadow: 0 10px 18px rgba(18, 189, 111, 0.22);
+}
+
+.danger-save {
+  background: var(--red-text);
+  box-shadow: 0 10px 18px rgba(224, 68, 91, 0.2);
 }
 
 .add-button svg,
@@ -848,6 +854,45 @@ dialog::backdrop {
   display: grid;
   gap: 14px;
   background: var(--card);
+}
+
+.confirm-card {
+  width: min(430px, calc(100vw - 40px));
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 16px;
+  background: var(--card);
+}
+
+.confirm-icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--red-text);
+  background: var(--red-soft);
+  font-weight: 900;
+}
+
+.confirm-card h2 {
+  color: #202631;
+  font-size: 22px;
+}
+
+.confirm-card p {
+  margin-top: 8px;
+  color: #697084;
+  line-height: 1.45;
+}
+
+.confirm-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 8px;
 }
 
 .editor-head,
