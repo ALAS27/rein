@@ -10,13 +10,9 @@
     <main class="shell">
       <aside class="sidebar" aria-label="App navigation">
         <div class="brand">D</div>
-        <button class="nav-button active" title="Deadlines" aria-label="Deadlines" data-icon="circle-help"></button>
-        <button class="nav-button" title="Team" aria-label="Team" data-icon="users"></button>
-        <button class="nav-button" title="Reports" aria-label="Reports" data-icon="clipboard-list"></button>
-        <button class="nav-button" title="Settings" aria-label="Settings" data-icon="braces"></button>
+        <button class="nav-button active" title="Deadlines" aria-label="Deadlines" data-panel-tab="deadlines">D</button>
+        <button class="nav-button" title="Google Calendar" aria-label="Google Calendar" data-panel-tab="calendar">C</button>
         <div class="nav-spacer"></div>
-        <button class="nav-button" title="Notifications" aria-label="Notifications" data-icon="bell"></button>
-        <button class="nav-button" title="Preferences" aria-label="Preferences" data-icon="settings"></button>
         <div class="avatar">K</div>
       </aside>
 
@@ -57,10 +53,6 @@
             <span class="icon-text">S</span>
             <input id="searchInput" type="search" placeholder="Search" />
           </label>
-          <div class="view-toggle" aria-label="View options">
-            <button class="active"><span class="icon-text">L</span>List</button>
-            <button><span class="icon-text">G</span>Grid</button>
-          </div>
         </section>
 
         <section class="app-tabs" aria-label="Dashboard tabs">
@@ -144,7 +136,7 @@
               <option>25</option>
             </select>
           </label>
-          <span><button id="prevPage" aria-label="Previous page">&lt;</button><strong>1</strong><button id="nextPage" aria-label="Next page">&gt;</button></span>
+          <span><button id="prevPage" aria-label="Previous page">&lt;</button><strong id="pageInfo">1 / 1</strong><button id="nextPage" aria-label="Next page">&gt;</button></span>
         </footer>
       </section>
     </main>

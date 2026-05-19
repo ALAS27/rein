@@ -117,7 +117,11 @@ async function syncCalendarFromGoogle() {
 }
 
 async function createGoogleCalendarEvent(item) {
-  if (!accessToken || item.googleCalendarEventId) return;
+  if (item.googleCalendarEventId) return;
+  if (!accessToken) {
+    setStatus("Task saved in dashboard. Connect Google to add it to Calendar.");
+    return;
+  }
   try {
     setStatus(`Adding "${item.title}" to Google Calendar...`);
     const event = await googleFetch("/calendars/primary/events", {

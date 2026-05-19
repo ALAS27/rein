@@ -76,6 +76,7 @@ let calendarEvents = [
 let items = loadItems();
 let deletedIds = loadDeletedIds();
 let activeCalendarMonth = "All";
+let currentPage = 1;
 
 const rows = document.querySelector("#deadlineRows");
 const searchInput = document.querySelector("#searchInput");
@@ -86,6 +87,9 @@ const pageSize = document.querySelector("#pageSize");
 const editor = document.querySelector("#editor");
 const calendarRows = document.querySelector("#calendarRows");
 const calendarMonthTabs = document.querySelector("#calendarMonthTabs");
+const pageInfo = document.querySelector("#pageInfo");
+const prevPage = document.querySelector("#prevPage");
+const nextPage = document.querySelector("#nextPage");
 
 function loadItems() {
   const raw = localStorage.getItem(STORAGE_KEY);
@@ -244,8 +248,14 @@ function renderStats(currentItems) {
 function render() {
   const current = filteredItems();
   const limit = Number(pageSize.value);
+  const totalPages = Math.max(1, Math.ceil(current.length / limit));
+  currentPage = Math.min(currentPage, totalPages);
+  const start = (currentPage - 1) * limit;
   renderStats(items);
-  rows.innerHTML = current.slice(0, limit).map(rowTemplate).join("");
+  rows.innerHTML = current.slice(start, start + limit).map(rowTemplate).join("");
+  pageInfo.textContent = `${currentPage} / ${totalPages}`;
+  prevPage.disabled = currentPage <= 1;
+  nextPage.disabled = currentPage >= totalPages;
   renderCalendar();
 }
 
@@ -253,7 +263,7 @@ function rowTemplate(item) {
   const left = daysLeft(item.due);
   const leftText = left < 0 ? `${Math.abs(left)} days late` : left === 0 ? "Today" : `${left} days left`;
   return `
-    <tr>
+    <tr data-edit="${item.id}" title="Open task details">
       <td>
         <div class="deadline-name">
           <span class="row-icon">D</span>
@@ -332,6 +342,7 @@ rows.addEventListener("change", (event) => {
 });
 
 rows.addEventListener("click", (event) => {
+  if (event.target.closest("a, select")) return;
   const menu = event.target.closest("[data-menu]");
   if (menu) {
     const id = menu.dataset.menu;
@@ -347,7 +358,7 @@ rows.addEventListener("click", (event) => {
     return;
   }
 
-  const edit = event.target.closest("[data-edit]");
+  const edit = event.target.closest("tr[data-edit]");
   if (!edit) return;
   openEditor(edit.dataset.edit);
 });
@@ -451,12 +462,28 @@ document.querySelector("#addNew").addEventListener("click", () => {
   openEditor(item.id);
 });
 
-[searchInput, statusFilter, monthFilter, pageSize].forEach((input) => input.addEventListener("input", render));
+[searchInput, statusFilter, monthFilter, pageSize].forEach((input) => {
+  input.addEventListener("input", () => {
+    currentPage = 1;
+    render();
+  });
+});
 
 clearFilters.addEventListener("click", () => {
   searchInput.value = "";
   statusFilter.value = "All";
   monthFilter.value = "All";
+  currentPage = 1;
+  render();
+});
+
+prevPage.addEventListener("click", () => {
+  currentPage = Math.max(1, currentPage - 1);
+  render();
+});
+
+nextPage.addEventListener("click", () => {
+  currentPage += 1;
   render();
 });
 
@@ -474,18 +501,6 @@ document.querySelectorAll("[data-panel-tab]").forEach((button) => {
     document.querySelector(".filters").classList.toggle("hidden", button.dataset.panelTab === "calendar");
     document.querySelector(".pager").classList.toggle("hidden", button.dataset.panelTab === "calendar");
   });
-});
-
-document.querySelectorAll(".nav-button[data-icon]").forEach((button) => {
-  const labels = {
-    "circle-help": "?",
-    users: "U",
-    "clipboard-list": "R",
-    braces: "{}",
-    bell: "!",
-    settings: "*",
-  };
-  button.textContent = labels[button.dataset.icon] || "D";
 });
 
 window.DeadlineHub = {
