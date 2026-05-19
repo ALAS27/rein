@@ -1,5 +1,6 @@
 const STORAGE_KEY = "deadline-hub-items-v1";
 const DELETED_KEY = "deadline-hub-deleted-items-v1";
+const BIR_TAX_REMINDER_URL = "https://www.bir.gov.ph/tax-reminder";
 
 const seedItems = [
   {
@@ -120,9 +121,9 @@ function mergeCalendarDeadlines(existingItems) {
         owner: "Julius",
         due,
         status: "Incomplete",
-        source: event.url,
+        source: primarySourceUrl(event),
         details: event.details,
-        tags: ["Calendar", "BIR", monthLabel(monthKey(event.start))],
+        tags: ["Calendar", "BIR", "Official priority", monthLabel(monthKey(event.start))],
       };
     })
     .filter((item) => !deleted.has(item.id));
@@ -146,9 +147,9 @@ async function loadTaxCalendarData() {
     const importedEvents = taxRows.map((row) => ({
       title: `Tax Reminder - ${dateLabel(row.date)}`,
       start: `${row.date}T08:00:00+08:00`,
-      source: row.source,
+      source: sourceLabel(row.source, `Tax Reminder - ${dateLabel(row.date)}`),
       details: row.details,
-      url: row.url,
+      url: BIR_TAX_REMINDER_URL,
     }));
     calendarEvents = [...importedEvents, ...personalEvents].sort((a, b) => new Date(a.start) - new Date(b.start));
     items = mergeCalendarDeadlines(items);
@@ -179,6 +180,19 @@ function eventTimeLabel(value) {
   const date = new Date(value);
   if (date.getHours() === 0 && date.getMinutes() === 0) return "All day";
   return new Intl.DateTimeFormat("en-US", { hour: "numeric", minute: "2-digit" }).format(date);
+}
+
+function isTaxReminder(value) {
+  return String(value || "").includes("Tax Reminder");
+}
+
+function primarySourceUrl(entry) {
+  return isTaxReminder(entry?.title) ? BIR_TAX_REMINDER_URL : entry?.url || entry?.source || "#";
+}
+
+function sourceLabel(source, title) {
+  if (isTaxReminder(title)) return "BIR official priority";
+  return source || "Source";
 }
 
 function monthKey(value) {
@@ -295,7 +309,7 @@ function calendarTemplate(event) {
         <h3>${escapeHtml(event.title)}</h3>
         <p>${escapeHtml(event.details)}</p>
       </div>
-      <a class="calendar-badge" href="${event.url}" target="_blank" rel="noopener noreferrer">${escapeHtml(event.source)}</a>
+      <a class="calendar-badge" href="${primarySourceUrl(event)}" target="_blank" rel="noopener noreferrer">${escapeHtml(sourceLabel(event.source, event.title))}</a>
     </article>
   `;
 }
