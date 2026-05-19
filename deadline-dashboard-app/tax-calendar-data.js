@@ -1,0 +1,656 @@
+window.TAX_CALENDAR_DATA = [
+  {
+    "date": "2026-05-05",
+    "source": "PwC May calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-may-tax-calendar.html",
+    "details": "e-Filing and e-Payment/Filing and payment of 2000 (DST) for April 2026."
+  },
+  {
+    "date": "2026-05-08",
+    "source": "PwC May calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-may-tax-calendar.html",
+    "details": "e-Filing and e-Payment/Filing and payment of 1600 (VAT/PT withheld) for April 2026.\ne-Submission of sales report using CRM/POS and/or other sales machine with TIN ending in even number for April 2026."
+  },
+  {
+    "date": "2026-05-11",
+    "source": "PwC May calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-may-tax-calendar.html",
+    "details": "Filing and payment of 1601-C (WTC) for April 2026 (non-eFPS filers).\nFiling and payment of 0619-E and 0619-F (EWT and FWT) for April 2026 (non-eFPS filers).\ne-Filing of 1601-C (WTC) for April 2026 (Group E).\ne-Filing of 0619-E and 0619-F (EWT and FWT) for April 2026 (Group E).\ne-Submission of sales report using CRM/POS and/or other sales machine with TIN ending in odd number for April 2026.\nIssuance of 2307 (Certificate of VAT/PT withheld) for April 2026."
+  },
+  {
+    "date": "2026-05-12",
+    "source": "PwC May calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-may-tax-calendar.html",
+    "details": "e-Filing of 1601-C (WTC) for April 2026 (Group D).\ne-Filing of 0619-E and 0619-F (EWT and FWT) for April 2026 (Group D)."
+  },
+  {
+    "date": "2026-05-13",
+    "source": "PwC May calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-may-tax-calendar.html",
+    "details": "e-Filing of 1601-C (WTC) for April 2026 (Group C).\ne-Filing of 0619-E and 0619-F (EWT and FWT) for April 2026 (Group C)."
+  },
+  {
+    "date": "2026-05-14",
+    "source": "PwC May calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-may-tax-calendar.html",
+    "details": "e-Filing of 1601-C (WTC) for April 2026 (Group B).\ne-Filing of 0619-E and 0619-F (EWT and FWT) for April 2026 (Group B).\nSubmission to PEZA via ACMS of 1702Q (ITR) filed with the BIR on 29 April 2026 by PEZA registered enterprises for QE 28 February 2026.\nRemittance of HDMF contributions for April 2026 by employers whose names begin with letters A to D."
+  },
+  {
+    "date": "2026-05-15",
+    "source": "PwC May calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-may-tax-calendar.html",
+    "details": "Filing and payment of 1701Q (self-employed/professionals) for QE 31 March 2026.\ne-Filing of 1601-C (WTC) for April 2026 (Group A).\ne-Filing of 0619-E and 0619-F (EWT and FWT) for April 2026 (Group A).\ne-Payment of 1601-C (WTC) for April 2026 (all eFPS filers).\ne-Payment of 0619-E and 0619-F (EWT and FWT) for April 2026 (all eFPS filers).\ne-Filing and e-Payment/Filing and payment of 1702 (ITR) and other required attachments for YE 31 December 2025 (original deadline is on 15 April 2026).\ne-Filing and e-Payment/Filing and payment of 1702 (ITR) and other required attachments for YE 31 January 2026.\ne-Filing and e-Payment/Filing and payment of 1707-A (CGT) for YE 31 January 2026.\nSubmission of attachments to the 1702 (ITR), together with 1709 (RPT Form), if applicable, for YE 31 December 2025 (e-filers) (original deadline is on 30 April 2026).\nSubmission of bound loose-leaf books of accounts and other required documents for YE 30 April 2026 registered under loose-leaf.\nSubmission of notarized sworn declaration of new income recipients, availing of lower EWT rate or tax exemption, by withholding agents to the BIR for April 2026.\nSubmission to PEZA of AFS and ITR filed with the BIR on 15 April 2026 by PEZA-registered enterprises whose YE 31 December 2025.\nSubmission to PEZA/BOI of ATIR and ABR (Annexes A.1 to B.2) by PEZA/BOI-registered enterprises for YE 31 December 2025.\nSubmission to PEZA/BOI of ABR (Annex B.3) by PEZA/BOI-registered enterprises for YE 2025.\nRemittance of PHIC contributions for April 2026 by employers whose PEN ends in 0 to 4.\nRemittance of HDMF loan payments for April 2026."
+  },
+  {
+    "date": "2026-05-18",
+    "source": "PwC May calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-may-tax-calendar.html",
+    "details": "Filing with the SEC of annual report for YE 31 January 2026 by corporations whose securities are registered under the SRC/RSA."
+  },
+  {
+    "date": "2026-05-19",
+    "source": "PwC May calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-may-tax-calendar.html",
+    "details": "Submission of CETI application of RBEs to their IPAs for YE 30 April 2026.\nRemittance of HDMF contributions for April 2026 by employers whose names begin with letters E to L."
+  },
+  {
+    "date": "2026-05-20",
+    "source": "PwC May calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-may-tax-calendar.html",
+    "details": "Submission to PEZA of EZMPR by PEZA-registered enterprises for April 2026.\nRemittance of PHIC contributions for April 2026 by employers whose PEN ends in 5 to 9."
+  },
+  {
+    "date": "2026-05-22",
+    "source": "PwC May calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-may-tax-calendar.html",
+    "details": "Remittance of HDMF contributions for April 2026 by employers whose names begin with letters M to Q."
+  },
+  {
+    "date": "2026-05-25",
+    "source": "PwC May calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-may-tax-calendar.html",
+    "details": "e-Filing and e-Payment/Filing and payment of 2550Q (VAT) for QE 30 April 2026.\ne-Filing and e-Payment/Filing and payment of 2551Q (PT) for QE 30 April 2026.\ne-Filing and e-Payment of 2550-DS (VAT for NRDSPs) for QE 30 April 2026.\ne-Submission of SLSPI / Summary List of Local Sales for Non-VAT registered RBEs and SAWT for VAT credits for QE 30 April 2026 (non-eFPS filers).\ne-Submission of SAWT for VAT credits for QE 30 April 2026 (LTS & eFPS filers)."
+  },
+  {
+    "date": "2026-05-29",
+    "source": "PwC May calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-may-tax-calendar.html",
+    "details": "Submission of notarized sworn statement for the use of forex rates other than BAP published rates for FY ended 31 May 2027.\nRemittance of HDMF contributions for April 2026 by employers whose names begin with letters R to Z or numeral."
+  },
+  {
+    "date": "2026-06-01",
+    "source": "PwC June calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-june-tax-calendar.html",
+    "details": "Filing with the SEC of AFS for YE 31 January 2026 by corporations whose securities are not registered under the SRC/RSA.\nFiling with the SEC of AFS for YE 31 January 2026 by securities brokers.\ne-Filing and e-Payment/Filing and payment of 1702Q (ITR) for QE 31 March 2026.\nSubmission of attachments to the 1702 (ITR), together with 1709 (RPT Form), if applicable, for YE 31 January 2026 (e-filers).\nSubmission of RFC for YE 31 January 2026.\nSubmission of the SAWT for QE 31 March 2026.\nSubmission of soft copy of books of accounts and other required documents for YE 30 April 2026 registered under CAS.\nSubmission of Inventory Lists for YE 30 April 2026.\ne-Submission of SLSPI / Summary List of Local Sales for Non-VAT registered RBEs for QE 30 April 2026 (LTS & eFPS filers).\nSubmission to BOI of BOI Form S-1, AFS and ITR filed with the BIR on 15 May 2026 by BOI-registered enterprises whose YE 31 January 2026.\nRemittance of SSS contributions and loan payments for April 2026."
+  },
+  {
+    "date": "2026-06-05",
+    "source": "PwC June calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-june-tax-calendar.html",
+    "details": "e-Filing and e-Payment/Filing and payment of 2000 (DST) for May 2026."
+  },
+  {
+    "date": "2026-06-08",
+    "source": "PwC June calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-june-tax-calendar.html",
+    "details": "e-Submission of sales report using CRM/POS and/or other sales machine with TIN ending in even number for May 2026."
+  },
+  {
+    "date": "2026-06-10",
+    "source": "PwC June calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-june-tax-calendar.html",
+    "details": "Filing and payment of 1601-C (WTC) for May 2026 (non-eFPS filers).\nFiling and payment of 0619-E and 0619-F (EWT and FWT) for May 2026 (non-eFPS filers).\ne-Filing and e-Payment/Filing and payment of 1600 (VAT/PT withheld) for May 2026.\ne-Submission of sales report using CRM/POS and/or other sales machine with TIN ending in odd number for May 2026.\nIssuance of 2307 (Certificate of VAT/PT withheld) for May 2026."
+  },
+  {
+    "date": "2026-06-11",
+    "source": "PwC June calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-june-tax-calendar.html",
+    "details": "e-Filing of 1601-C (WTC) for May 2026 (Group E).\ne-Filing of 0619-E and 0619-F (EWT and FWT) for May 2026 (Group E).\nRemittance of HDMF contributions for May 2026 by employers whose names begin with letters A to D."
+  },
+  {
+    "date": "2026-06-15",
+    "source": "PwC June calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-june-tax-calendar.html",
+    "details": "Filing with the SEC of AFS for corporations with YE 31 December 2025.\nFiling with the SEC of annual report for YE 28 February 2026 by corporations whose securities are registered under the SRC/RSA.\ne-Filing of 1601-C (WTC) for May 2026 (Groups A, B, C and D).\ne-Filing of 0619-E and 0619-F (EWT and FWT) for May 2026 (Groups A, B, C and D).\ne-Payment of 1601-C (WTC) for May 2026 (all eFPS filers).\ne-Payment of 0619-E and 0619-F (EWT and FWT) for May 2026 (all eFPS filers).\ne-Filing and e-Payment/Filing and payment of 1702 (ITR) and other required attachments for YE 28 February 2026.\ne-Filing and e-Payment/Filing and payment of 1707-A (CGT) for YE 28 February 2026.\nSubmission of bound loose-leaf books of accounts and other required documents for YE 31 May 2026 registered under loose-leaf.\nSubmission of notarized sworn declaration of new income recipients, availing of lower EWT rate or tax exemption, by withholding agents to the BIR for May 2026.\nSubmission to PEZA of AFS and ITR filed with the BIR on 15 May 2026 by PEZA-registered enterprises whose YE 31 January 2026.\nSubmission to PEZA/BOI of ATIR and ABR (Annexes A.1 to B.2) by PEZA/BOI registered enterprises for YE 31 January 2026.\nRemittance of PHIC contributions for May 2026 by employers whose PEN ends in 0 to 4.\nRemittance of HDMF loan payments for May 2026."
+  },
+  {
+    "date": "2026-06-16",
+    "source": "PwC June calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-june-tax-calendar.html",
+    "details": "Submission to PEZA via ACMS of 1702Q (ITR) filed with the BIR on 01 June 2026 by PEZA registered enterprises for QE 31 March 2026."
+  },
+  {
+    "date": "2026-06-17",
+    "source": "PwC June calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-june-tax-calendar.html",
+    "details": "Submission of CETI application of RBEs to their IPAs for YE 31 May 2026."
+  },
+  {
+    "date": "2026-06-19",
+    "source": "PwC June calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-june-tax-calendar.html",
+    "details": "Submission to PEZA of EZMPR by PEZA-registered enterprises for May 2026.\nRemittance of HDMF contributions for May 2026 by employers whose names begin with letters E to L."
+  },
+  {
+    "date": "2026-06-22",
+    "source": "PwC June calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-june-tax-calendar.html",
+    "details": "Remittance of PHIC contributions for May 2026 by employers whose PEN ends in 5 to 9."
+  },
+  {
+    "date": "2026-06-24",
+    "source": "PwC June calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-june-tax-calendar.html",
+    "details": "Remittance of HDMF contributions for May 2026 by employers whose names begin with letters M to Q."
+  },
+  {
+    "date": "2026-06-25",
+    "source": "PwC June calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-june-tax-calendar.html",
+    "details": "e-Filing and e-Payment/Filing and payment of 2550Q (VAT) for QE 31 May 2026.\ne-Filing and e-Payment/Filing and payment of 2551Q (PT) for QE 31 May 2026.\ne-Filing and e-Payment of 2550-DS (VAT for NRDSPs) for QE 31 May 2026.\ne-Submission of SLSPI / Summary List of Local Sales for Non-VAT registered RBEs and SAWT for VAT credits for QE 31 May 2026 (non-eFPS filers).\ne-Submission of SAWT for VAT credits for QE 31 May 2026 (LTS & eFPS filers)."
+  },
+  {
+    "date": "2026-06-29",
+    "source": "PwC June calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-june-tax-calendar.html",
+    "details": "Filing with the SEC of AFS for YE 28 February 2026 by corporations whose securities are not registered under the SRC/RSA.\nFiling with the SEC of AFS for YE 28 February 2026 by securities brokers.\ne-Filing and e-Payment/Filing and payment of 1702Q (ITR) for QE 30 April 2026.\nSubmission of the SAWT for QE 30 April 2026."
+  },
+  {
+    "date": "2026-06-30",
+    "source": "PwC June calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-june-tax-calendar.html",
+    "details": "Submission of RFC for YE 28 February 2026.\nSubmission of attachments to the 1702 (ITR), together with 1709 (RPT Form), if applicable, for YE 28 February 2026 (e-filers).\nSubmission of soft copy of books of accounts and other required documents for YE 31 May 2026 registered under CAS.\nSubmission of Inventory Lists for YE 31 May 2026.\ne-Submission of SLSPI / Summary List of Local Sales for Non-VAT registered RBEs for QE 31 May 2026 (LTS & eFPS filers).\nSubmission to BOI of BOI Form S-1, AFS and ITR filed with the BIR on 15 June 2026 by BOI-registered enterprises whose YE 28 February 2026.\nSubmission of notarized sworn statement for the use of forex rates other than BAP published rates for FY ended 30 June 2027.\nRemittance of SSS contributions and loan payments for May 2026.\nRemittance of HDMF contributions for May 2026 by employers whose names begin with letters R to Z or numeral.\nPayment of 2nd installment of RPT for 2026."
+  },
+  {
+    "date": "2026-07-06",
+    "source": "PwC July calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-july-tax-calendar.html",
+    "details": "e-Filing and e-Payment/Filing and payment of 2000 (DST) for June 2026."
+  },
+  {
+    "date": "2026-07-08",
+    "source": "PwC July calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-july-tax-calendar.html",
+    "details": "e-Submission of sales report using CRM/POS and/or other sales machine with TIN ending in even number for June 2026."
+  },
+  {
+    "date": "2026-07-10",
+    "source": "PwC July calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-july-tax-calendar.html",
+    "details": "Filing and payment of 1601-C (WTC) for June 2026 (non-eFPS filers).\ne-Filing and e-Payment/Filing and payment of 1600 (VAT/PT withheld) for June 2026.\ne-Submission of sales report using CRM/POS and/or other sales machine with TIN ending in odd number for June 2026.\nIssuance of 2307 (Certificate of VAT/PT withheld) for June 2026."
+  },
+  {
+    "date": "2026-07-13",
+    "source": "PwC July calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-july-tax-calendar.html",
+    "details": "e-Filing of 1601-C (WTC) for June 2026 (Groups C, D and E)."
+  },
+  {
+    "date": "2026-07-14",
+    "source": "PwC July calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-july-tax-calendar.html",
+    "details": "Filing with the SEC of annual report for YE 31 March 2026 by corporations whose securities are registered under the SRC/RSA.\ne-Filing of 1601-C (WTC) for June 2026 (Group B).\nSubmission to PEZA via ACMS of 1702Q (ITR) filed with the BIR on 29 June 2026 by PEZA registered enterprises for QE 30 April 2026.\nRemittance of HDMF contributions for June 2026 by employers whose names begin with letters A to D."
+  },
+  {
+    "date": "2026-07-15",
+    "source": "PwC July calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-july-tax-calendar.html",
+    "details": "e-Filing of 1601-C (WTC) for June 2026 (Group A).\ne-Payment of 1601-C (WTC) for June 2026 (all eFPS filers).\ne-Filing and e-Payment/Filing and payment of 1702 (ITR) and other required attachments for YE 31 March 2026.\ne-Filing and e-Payment/Filing and payment of 1707-A (CGT) for YE 31 March 2026.\nSubmission of bound loose-leaf books of accounts and other required documents for YE 30 June 2026 registered under loose-leaf.\nSubmission of notarized sworn declaration of new income recipients, availing of lower EWT rate or tax exemption, by withholding agents to the BIR for June 2026.\nSubmission to PEZA of AFS and ITR filed with the BIR on 15 June 2026 by PEZA-registered enterprises whose YE 28 February 2026.\nSubmission to PEZA/BOI of ATIR and ABR (Annexes A.1 to B.2) by PEZA/BOI-registered enterprises for YE 28 February 2026.\nRemittance of PHIC contributions for June 2026 by employers whose PEN ends in 0 to 4.\nRemittance of HDMF loan payments for June 2026."
+  },
+  {
+    "date": "2026-07-17",
+    "source": "PwC July calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-july-tax-calendar.html",
+    "details": "Submission of CETI application of RBEs to their IPAs for YE 30 June 2026.\nRemittance of HDMF contributions for June 2026 by employers whose names begin with letters E to L."
+  },
+  {
+    "date": "2026-07-20",
+    "source": "PwC July calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-july-tax-calendar.html",
+    "details": "Issuance of 2306 (FWT certificate) for QE 30 June 2026.\nIssuance of 2307 (EWT certificate) for QE 30 June 2026.\nSubmission to PEZA of EZMPR by PEZA-registered enterprises for June 2026.\nRemittance of PHIC contributions for June 2026 by employers whose PEN ends in 5 to 9.\nPayment of 3rd installment of local taxes for 2026."
+  },
+  {
+    "date": "2026-07-24",
+    "source": "PwC July calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-july-tax-calendar.html",
+    "details": "Remittance of HDMF contributions for June 2026 by employers whose names begin with letters M to Q."
+  },
+  {
+    "date": "2026-07-27",
+    "source": "PwC July calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-july-tax-calendar.html",
+    "details": "e-Filing and e-Payment/Filing and payment of 2550Q (VAT) for QE 30 June 2026.\ne-Filing and e-Payment/Filing and payment of 2551Q (PT) for QE 30 June 2026.\ne-Filing and e-Payment of 2550-DS (VAT for NRDSPs) for QE 30 June 2026.\ne-Submission of SLSPI / Summary List of Local Sales for Non-VAT registered RBEs and SAWT for VAT credits for QE 30 June 2026 (non-eFPS filers).\ne-Submission of SAWT for VAT credits for QE 30 June 2026 (LTS & eFPS filers)."
+  },
+  {
+    "date": "2026-07-29",
+    "source": "PwC July calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-july-tax-calendar.html",
+    "details": "Filing with the SEC of AFS for YE 31 March 2026 by corporations whose securities are not registered under the SRC/RSA.\nFiling with the SEC of AFS for YE 31 March 2026 by securities brokers."
+  },
+  {
+    "date": "2026-07-30",
+    "source": "PwC July calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-july-tax-calendar.html",
+    "details": "e-Filing and e-Payment/Filing and payment of 1702Q (ITR) for QE 31 May 2026.\nSubmission of attachments to the 1702 (ITR), together with 1709 (RPT Form), if applicable, for YE 31 March 2026 (e-filers).\nSubmission of the SAWT for QE 31 May 2026.\nSubmission of soft copy of books of accounts and other required documents for YE 30 June 2026 registered under CAS.\nSubmission of Inventory Lists for YE 30 June 2026.\ne-Submission of SLSPI / Summary List of Local Sales for Non-VAT registered RBEs for QE 30 June 2026 (LTS & eFPS filers)."
+  },
+  {
+    "date": "2026-07-31",
+    "source": "PwC July calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-july-tax-calendar.html",
+    "details": "e-Filing and e-Payment/Filing and payment of 1601-EQ, 1601-FQ, 1602Q and 1603Q (EWT, FWT and FBT) for QE 30 June 2026.\nSubmission of RFC for YE 31 March 2026.\nSubmission of contract of lease and information on lessee/lessors/sub-lessors of commercial establishments, buildings or spaces for tenants as of 30 June 2026.\nSubmission to BOI of BOI Form S-1, AFS and ITR filed with the BIR on 15 July 2026 by BOI-registered enterprises whose YE 31 March 2026.\nSubmission of notarized sworn statement for the use of forex rates other than BAP published rates for FY ended 31 July 2027.\nRemittance of SSS contributions and loan payments for June 2026.\nRemittance of HDMF contributions for June 2026 by employers whose names begin with letters R to Z or numeral."
+  },
+  {
+    "date": "2026-08-05",
+    "source": "PwC August calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-august-tax-calendar.html",
+    "details": "e-Filing and e-Payment/Filing and payment of 2000 (DST) for July 2026."
+  },
+  {
+    "date": "2026-08-10",
+    "source": "PwC August calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-august-tax-calendar.html",
+    "details": "Filing and payment of 1601-C (WTC) for July 2026 (non-eFPS filers).\nFiling and payment of 0619-E and 0619-F (EWT and FWT) for July 2026 (non-eFPS filers).\ne-Filing and e-Payment/Filing and payment of 1600 (VAT/PT withheld) for July 2026.\ne-Submission of sales report using CRM/POS and/or other sales machine with TIN ending in even and odd numbers for July 2026.\nIssuance of 2307 (Certificate of VAT/PT withheld) for July 2026."
+  },
+  {
+    "date": "2026-08-11",
+    "source": "PwC August calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-august-tax-calendar.html",
+    "details": "e-Filing of 1601-C (WTC) for July 2026 (Group E).\ne-Filing of 0619-E and 0619-F (EWT and FWT) for July 2026 (Group E)."
+  },
+  {
+    "date": "2026-08-12",
+    "source": "PwC August calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-august-tax-calendar.html",
+    "details": "e-Filing of 1601-C (WTC) for July 2026 (Group D).\ne-Filing of 0619-E and 0619-F (EWT and FWT) for July 2026 (Group D)."
+  },
+  {
+    "date": "2026-08-13",
+    "source": "PwC August calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-august-tax-calendar.html",
+    "details": "Filing with the SEC of annual report for YE 30 April 2026 by corporations whose securities are registered under the SRC/RSA.\ne-Filing of 1601-C (WTC) for July 2026 (Group C).\ne-Filing of 0619-E and 0619-F (EWT and FWT) for July 2026 (Group C)."
+  },
+  {
+    "date": "2026-08-14",
+    "source": "PwC August calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-august-tax-calendar.html",
+    "details": "e-Filing of 1601-C (WTC) for July 2026 (Group B).\ne-Filing of 0619-E and 0619-F (EWT and FWT) for July 2026 (Group B).\nSubmission to PEZA of AFS and ITR filed with the BIR on 15 July 2026 by PEZA-registered enterprises whose YE 31 March 2026.\nSubmission to PEZA/BOI of ATIR and ABR (Annexes A.1 to B.2) by PEZA/BOI-registered enterprises for YE 31 March 2026.\nSubmission to PEZA via ACMS of 1702Q (ITR) filed with the BIR on 30 July 2026 by PEZA-registered enterprises for QE 31 May 2026.\nRemittance of HDMF contributions for July 2026 by employers whose names begin with letters A to D."
+  },
+  {
+    "date": "2026-08-17",
+    "source": "PwC August calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-august-tax-calendar.html",
+    "details": "Filing and payment of 1701Q (self-employed/professionals) for QE 30 June 2026.\ne-Filing of 1601-C (WTC) for July 2026 (Group A).\ne-Filing of 0619-E and 0619-F (EWT and FWT) for July 2026 (Group A).\ne-Payment of 1601-C (WTC) for July 2026 (all eFPS filers).\ne-Payment of 0619-E and 0619-F (EWT and FWT) for July 2026 (all eFPS filers).\ne-Filing and e-Payment/Filing and payment of 1702 (ITR) and other required attachments for YE 30 April 2026.\ne-Filing and e-Payment/Filing and payment of 1707-A (CGT) for YE 30 April 2026.\nSubmission of bound loose-leaf books of accounts and other required documents for YE 31 July 2026 registered under loose-leaf.\nSubmission of notarized sworn declaration of new income recipients, availing of lower EWT rate or tax exemption, by withholding agents to the BIR for July 2026.\nRemittance of PHIC contributions for July 2026 by employers whose PEN ends in 0 to 4.\nRemittance of HDMF loan payments for July 2026."
+  },
+  {
+    "date": "2026-08-18",
+    "source": "PwC August calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-august-tax-calendar.html",
+    "details": "Submission of CETI application of RBEs to their IPAs for YE 31 July 2026."
+  },
+  {
+    "date": "2026-08-19",
+    "source": "PwC August calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-august-tax-calendar.html",
+    "details": "Remittance of HDMF contributions for July 2026 by employers whose names begin with letters E to L."
+  },
+  {
+    "date": "2026-08-20",
+    "source": "PwC August calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-august-tax-calendar.html",
+    "details": "Submission to PEZA of EZMPR by PEZA-registered enterprises for July 2026.\nRemittance of PHIC contributions for July 2026 by employers whose PEN ends in 5 to 9."
+  },
+  {
+    "date": "2026-08-24",
+    "source": "PwC August calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-august-tax-calendar.html",
+    "details": "Remittance of HDMF contributions for July 2026 by employers whose names begin with letters M to Q."
+  },
+  {
+    "date": "2026-08-25",
+    "source": "PwC August calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-august-tax-calendar.html",
+    "details": "e-Filing and e-Payment/Filing and payment of 2550Q (VAT) for QE 31 July 2026.\ne-Filing and e-Payment/Filing and payment of 2551Q (PT) for QE 31 July 2026.\ne-Filing and e-Payment of 2550-DS (VAT for NRDSPs) for QE 31 July 2026.\ne-Submission of SLSPI / Summary List of Local Sales for Non-VAT registered RBEs and SAWT for VAT credits for QE 31 July 2026 (non-eFPS filers).\ne-Submission of SAWT for VAT credits for QE 31 July 2026 (LTS & eFPS filers)."
+  },
+  {
+    "date": "2026-08-28",
+    "source": "PwC August calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-august-tax-calendar.html",
+    "details": "Filing with the SEC of AFS for YE 30 April 2026 by corporations whose securities are not registered under the SRC/RSA.\nFiling with the SEC of AFS for YE 30 April 2026 by securities brokers.\nSubmission of notarized sworn statement for the use of forex rates other than BAP published rates for FY ended 31 August 2027.\nRemittance of HDMF contributions for July 2026 by employers whose names begin with letters R to Z or numeral."
+  },
+  {
+    "date": "2026-09-01",
+    "source": "PwC September calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-september-tax-calendar.html",
+    "details": "e-Filing and e-Payment/Filing and payment of 1702Q (ITR) for QE 30 June 2026.\nSubmission of attachments to the 1702 (ITR), together with 1709 (RPT Form), if applicable, for YE 30 April 2026 (e-filers).\nSubmission of RFC for YE 30 April 2026.\nSubmission of the SAWT for QE 30 June 2026.\nSubmission of soft copy of books of accounts and other required documents for YE 31 July 2026 registered under CAS.\nSubmission of Inventory Lists for YE 31 July 2026.\ne-Submission of SLSPI / Summary List of Local Sales for Non-VAT registered RBEs for QE 31 July 2026 (LTS & eFPS filers).\nSubmission to BOI of BOI Form S-1, AFS and ITR filed with the BIR on 17 August 2026 by BOI-registered enterprises whose YE 30 April 2026.\nRemittance of SSS contributions and loan payments for July 2026."
+  },
+  {
+    "date": "2026-09-07",
+    "source": "PwC September calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-september-tax-calendar.html",
+    "details": "e-Filing and e-Payment/Filing and payment of 2000 (DST) for August 2026."
+  },
+  {
+    "date": "2026-09-08",
+    "source": "PwC September calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-september-tax-calendar.html",
+    "details": "e-Submission of sales report using CRM/POS and/or other sales machine with TIN ending in even number for August 2026."
+  },
+  {
+    "date": "2026-09-10",
+    "source": "PwC September calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-september-tax-calendar.html",
+    "details": "Filing and payment of 1601-C (WTC) for August 2026 (non-eFPS filers).\nFiling and payment of 0619-E and 0619-F (EWT and FWT) for August 2026 (non-eFPS filers).\ne-Filing and e-Payment/Filing and payment of 1600 (VAT/PT withheld) for August 2026.\ne-Submission of sales report using CRM/POS and/or other sales machine with TIN ending in odd number for August 2026.\nIssuance of 2307 (Certificate of VAT/PT withheld) for August 2026."
+  },
+  {
+    "date": "2026-09-11",
+    "source": "PwC September calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-september-tax-calendar.html",
+    "details": "e-Filing of 1601-C (WTC) for August 2026 (Group E).\ne-Filing of 0619-E and 0619-F (EWT and FWT) for August 2026 (Group E)."
+  },
+  {
+    "date": "2026-09-14",
+    "source": "PwC September calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-september-tax-calendar.html",
+    "details": "Filing with the SEC of annual report for YE 31 May 2026 by corporations whose securities are registered under the SRC/RSA.\ne-Filing of 1601-C (WTC) for August 2026 (Groups B, C and D).\ne-Filing of 0619-E and 0619-F (EWT and FWT) for August 2026 (Groups B, C and D).\nRemittance of HDMF contributions for August 2026 by employers whose names begin with letters A to D."
+  },
+  {
+    "date": "2026-09-15",
+    "source": "PwC September calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-september-tax-calendar.html",
+    "details": "e-Filing of 1601-C (WTC) for August 2026 (Group A).\ne-Filing of 0619-E and 0619-F (EWT and FWT) for August 2026 (Group A).\ne-Payment of 1601-C (WTC) for August 2026 (all eFPS filers).\ne-Payment of 0619-E and 0619-F (EWT and FWT) for August 2026 (all eFPS filers).\ne-Filing and e-Payment/Filing and payment of 1702 (ITR) and other required attachments for YE 31 May 2026.\ne-Filing and e-Payment/Filing and payment of 1707-A (CGT) for YE 31 May 2026.\nSubmission of bound loose-leaf books of accounts and other required documents for YE 31 August 2026 registered under loose-leaf.\nSubmission of notarized sworn declaration of new income recipients, availing of lower EWT rate or tax exemption, by withholding agents to the BIR for August 2026.\nRemittance of PHIC contributions for August 2026 by employers whose PEN ends in 0 to 4.\nRemittance of HDMF loan payments for August 2026."
+  },
+  {
+    "date": "2026-09-16",
+    "source": "PwC September calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-september-tax-calendar.html",
+    "details": "Submission to PEZA of AFS and ITR filed with the BIR on 17 August 2026 by PEZA-registered enterprises whose YE 30 April 2026.\nSubmission to PEZA/BOI of ATIR and ABR (Annexes A.1 to B.2) by PEZA/BOI-registered enterprises for YE 30 April 2026.\nSubmission to PEZA via ACMS of 1702Q (ITR) filed with the BIR on 01 September 2026 by PEZA-registered enterprises for QE 30 June 2026.\nSubmission of CETI application of RBEs to their IPAs for YE 31 August 2026."
+  },
+  {
+    "date": "2026-09-18",
+    "source": "PwC September calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-september-tax-calendar.html",
+    "details": "Submission to PEZA of EZMPR by PEZA-registered enterprises for August 2026.\nRemittance of HDMF contributions for August 2026 by employers whose names begin with letters E to L."
+  },
+  {
+    "date": "2026-09-21",
+    "source": "PwC September calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-september-tax-calendar.html",
+    "details": "Remittance of PHIC contributions for August 2026 by employers whose PEN ends in 5 to 9."
+  },
+  {
+    "date": "2026-09-24",
+    "source": "PwC September calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-september-tax-calendar.html",
+    "details": "Remittance of HDMF contributions for August 2026 by employers whose names begin with letters M to Q."
+  },
+  {
+    "date": "2026-09-25",
+    "source": "PwC September calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-september-tax-calendar.html",
+    "details": "e-Filing and e-Payment/Filing and payment of 2550Q (VAT) for QE 31 August 2026.\ne-Filing and e-Payment/Filing and payment of 2551Q (PT) for QE 31 August 2026.\ne-Filing and e-Payment of 2550-DS (VAT for NRDSPs) for QE 31 August 2026.\ne-Submission of SLSPI / Summary List of Local Sales for Non-VAT registered RBEs and SAWT for VAT credits for QE 31 August 2026 (non-eFPS filers).\ne-Submission of SAWT for VAT credits for QE 31 August 2026 (LTS & eFPS filers)."
+  },
+  {
+    "date": "2026-09-28",
+    "source": "PwC September calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-september-tax-calendar.html",
+    "details": "Filing with the SEC of AFS for YE 31 May 2026 by corporations whose securities are not registered under the SRC/RSA.\nFiling with the SEC of AFS for YE 31 May 2026 by securities brokers."
+  },
+  {
+    "date": "2026-09-29",
+    "source": "PwC September calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-september-tax-calendar.html",
+    "details": "e-Filing and e-Payment/Filing and payment of 1702Q (ITR) for QE 31 July 2026.\nSubmission of the SAWT for QE 31 July 2026."
+  },
+  {
+    "date": "2026-09-30",
+    "source": "PwC September calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-september-tax-calendar.html",
+    "details": "Submission of attachments to the 1702 (ITR), together with 1709 (RPT Form), if applicable, for YE 31 May 2026 (e-filers).\nSubmission of RFC for YE 31 May 2026.\nSubmission of soft copy of books of accounts and other required documents for YE 31 August 2026 registered under CAS.\nSubmission of Inventory Lists for YE 31 August 2026.\ne-Submission of SLSPI / Summary List of Local Sales for Non-VAT registered RBEs for QE 31 August 2026 (LTS & eFPS filers).\nSubmission to BOI of BOI Form S-1, AFS and ITR filed with the BIR on 15 September 2026 by BOI-registered enterprises whose YE 31 May 2026.\nSubmission of notarized sworn statement for the use of forex rates other than BAP published rates for FY ended 30 September 2027.\nRemittance of SSS contributions and loan payments for August 2026.\nRemittance of HDMF contributions for August 2026 by employers whose names begin with letters R to Z or numeral.\nPayment of 3rd installment of RPT for 2026."
+  },
+  {
+    "date": "2026-10-05",
+    "source": "PwC October calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-october-tax-calendar.html",
+    "details": "e-Filing and e-Payment/Filing and payment of 2000 (DST) for September 2026."
+  },
+  {
+    "date": "2026-10-08",
+    "source": "PwC October calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-october-tax-calendar.html",
+    "details": "e-Submission of sales report using CRM/POS and/or other sales machine with TIN ending in even number for September 2026."
+  },
+  {
+    "date": "2026-10-09",
+    "source": "PwC October calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-october-tax-calendar.html",
+    "details": "e-Filing and e-Payment/Filing and payment of 1600 (VAT/PT withheld) for September 2026."
+  },
+  {
+    "date": "2026-10-12",
+    "source": "PwC October calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-october-tax-calendar.html",
+    "details": "Filing and payment of 1601-C (WTC) for September 2026 (non-eFPS filers).\ne-Filing of 1601-C (WTC) for September 2026 (Groups D and E).\ne-Submission of sales report using CRM/POS and/or other sales machine with TIN ending in odd number for September 2026.\nIssuance of 2307 (Certificate of VAT/PT withheld) for September 2026."
+  },
+  {
+    "date": "2026-10-13",
+    "source": "PwC October calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-october-tax-calendar.html",
+    "details": "Filing with the SEC of annual report for YE 30 June 2026 by corporations whose securities are registered under the SRC/RSA.\ne-Filing of 1601-C (WTC) for September 2026 (Group C)."
+  },
+  {
+    "date": "2026-10-14",
+    "source": "PwC October calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-october-tax-calendar.html",
+    "details": "e-Filing of 1601-C (WTC) for September 2026 (Group B).\nSubmission to PEZA via ACMS of 1702Q (ITR) filed with the BIR on 29 September 2026 by PEZA-registered enterprises for QE 31 July 2026.\nRemittance of HDMF contributions for September 2026 by employers whose names begin with letters A to D."
+  },
+  {
+    "date": "2026-10-15",
+    "source": "PwC October calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-october-tax-calendar.html",
+    "details": "e-Filing of 1601-C (WTC) for September 2026 (Group A).\ne-Payment of 1601-C (WTC) for September 2026 (all eFPS filers).\ne-Filing and e-Payment/Filing and payment of 1702 (ITR) and other required attachments for YE 30 June 2026.\ne-Filing and e-Payment/Filing and payment of 1707-A (CGT) for YE 30 June 2026.\nSubmission of bound loose-leaf books of accounts and other required documents for YE 30 September 2026 registered under loose-leaf.\nSubmission of notarized sworn declaration of new income recipients, availing of lower EWT rate or tax exemption, by withholding agents to the BIR for September 2026.\nSubmission to PEZA of AFS and ITR filed with the BIR on 15 September 2026 by PEZA-registered enterprises whose YE 31 May 2026.\nSubmission to PEZA/BOI of ATIR and ABR (Annexes A.1 to B.2) by PEZA/BOI-registered enterprises for YE 31 May 2026.\nRemittance of PHIC contributions for September 2026 by employers whose PEN ends in 0 to 4.\nRemittance of HDMF loan payments for September 2026.\nPayment of 2nd installment of 1701 (mixed income earner) and 1701A (business/profession income earner) for YE 31 December 2025."
+  },
+  {
+    "date": "2026-10-16",
+    "source": "PwC October calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-october-tax-calendar.html",
+    "details": "Submission of CETI application of RBEs to their IPAs for YE 30 September 2026."
+  },
+  {
+    "date": "2026-10-19",
+    "source": "PwC October calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-october-tax-calendar.html",
+    "details": "Remittance of HDMF contributions for September 2026 by employers whose names begin with letters E to L."
+  },
+  {
+    "date": "2026-10-20",
+    "source": "PwC October calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-october-tax-calendar.html",
+    "details": "Issuance of 2306 (FWT certificate) for QE 30 September 2026.\nIssuance of 2307 (EWT certificate) for QE 30 September 2026.\nSubmission to PEZA of EZMPR by PEZA-registered enterprises for September 2026.\nRemittance of PHIC contributions for September 2026 by employers whose PEN ends in 5 to 9.\nPayment of 4th installment of local taxes for 2026."
+  },
+  {
+    "date": "2026-10-23",
+    "source": "PwC October calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-october-tax-calendar.html",
+    "details": "Remittance of HDMF contributions for September 2026 by employers whose names begin with letters M to Q."
+  },
+  {
+    "date": "2026-10-26",
+    "source": "PwC October calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-october-tax-calendar.html",
+    "details": "e-Filing and e-Payment/Filing and payment of 2550Q (VAT) for QE 30 September 2026.\ne-Filing and e-Payment/Filing and payment of 2551Q (PT) for QE 30 September 2026.\ne-Filing and e-Payment of 2550-DS (VAT for NRDSPs) for QE 30 September 2026.\ne-Submission of SLSPI / Summary List of Local Sales for Non-VAT registered RBEs and SAWT for VAT credits for QE 30 September 2026 (non-eFPS filers).\ne-Submission of SAWT for VAT credits for QE 30 September 2026 (LTS & eFPS filers)."
+  },
+  {
+    "date": "2026-10-28",
+    "source": "PwC October calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-october-tax-calendar.html",
+    "details": "Filing with the SEC of AFS for YE 30 June 2026 by corporations whose securities are not registered under the SRC/RSA.\nFiling with the SEC of AFS for YE 30 June 2026 by securities brokers."
+  },
+  {
+    "date": "2026-10-30",
+    "source": "PwC October calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-october-tax-calendar.html",
+    "details": "e-Filing and e-Payment/Filing and payment of 1702Q (ITR) for QE 31 August 2026.\nSubmission of attachments to the 1702 (ITR), together with 1709 (RPT Form), if applicable, for YE 30 June 2026 (e-filers).\nSubmission of the SAWT for QE 31 August 2026.\nSubmission of soft copy of books of accounts and other required documents for YE 30 September 2026 registered under CAS.\nSubmission of Inventory Lists for YE 30 September 2026.\ne-Submission of SLSPI / Summary List of Local Sales for Non-VAT registered RBEs for QE 30 September 2026 (LTS & eFPS filers).\nSubmission of notarized sworn statement for the use of forex rates other than BAP published rates for FY ended 31 October 2027.\nRemittance of HDMF contributions for September 2026 by employers whose names begin with letters R to Z or numeral."
+  },
+  {
+    "date": "2026-11-03",
+    "source": "PwC November calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-november-tax-calendar.html",
+    "details": "e-Filing and e-Payment/Filing and payment of 1601-EQ, 1601-FQ, 1602Q and 1603Q (EWT, FWT and FBT) for QE 30 September 2026.\nSubmission of RFC for YE 30 June 2026.\nSubmission to BOI of BOI Form S-1, AFS and ITR filed with the BIR on 15 October 2026 by BOI-registered enterprises whose YE 30 June 2026.\nRemittance of SSS contributions and loan payments for September 2026."
+  },
+  {
+    "date": "2026-11-05",
+    "source": "PwC November calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-november-tax-calendar.html",
+    "details": "e-Filing and e-Payment/Filing and payment of 2000 (DST) for October 2026."
+  },
+  {
+    "date": "2026-11-09",
+    "source": "PwC November calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-november-tax-calendar.html",
+    "details": "e-Submission of sales report using CRM/POS and/or other sales machine with TIN ending in even number for October 2026."
+  },
+  {
+    "date": "2026-11-10",
+    "source": "PwC November calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-november-tax-calendar.html",
+    "details": "Filing and payment of 1601-C (WTC) for October 2026 (non-eFPS filers).\nFiling and payment of 0619-E and 0619-F (EWT and FWT) for October 2026 (non-eFPS filers).\ne-Filing and e-Payment/Filing and payment of 1600 (VAT/PT withheld) for October 2026.\ne-Submission of sales report using CRM/POS and/or other sales machine with TIN ending in odd number for October 2026.\nIssuance of 2307 (Certificate of VAT/PT withheld) for October 2026."
+  },
+  {
+    "date": "2026-11-11",
+    "source": "PwC November calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-november-tax-calendar.html",
+    "details": "e-Filing of 1601-C (WTC) for October 2026 (Group E).\ne-Filing of 0619-E and 0619-F (EWT and FWT) for October 2026 (Group E)."
+  },
+  {
+    "date": "2026-11-12",
+    "source": "PwC November calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-november-tax-calendar.html",
+    "details": "e-Filing of 1601-C (WTC) for October 2026 (Group D).\ne-Filing of 0619-E and 0619-F (EWT and FWT) for October 2026 (Group D)."
+  },
+  {
+    "date": "2026-11-13",
+    "source": "PwC November calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-november-tax-calendar.html",
+    "details": "Filing with the SEC of annual report for YE 31 July 2026 by corporations whose securities are registered under the SRC/RSA.\ne-Filing of 1601-C (WTC) for October 2026 (Group C).\ne-Filing of 0619-E and 0619-F (EWT and FWT) for October 2026 (Group C).\nRemittance of HDMF contributions for October 2026 by employers whose names begin with letters A to D."
+  },
+  {
+    "date": "2026-11-16",
+    "source": "PwC November calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-november-tax-calendar.html",
+    "details": "Filing and payment of 1701Q (self-employed/professionals) for QE 30 September 2026.\ne-Filing of 1601-C (WTC) for October 2026 (Groups A and B).\ne-Filing of 0619-E and 0619-F (EWT and FWT) for October 2026 (Groups A and B).\ne-Payment of 1601-C (WTC) for October 2026 (all eFPS filers).\ne-Payment of 0619-E and 0619-F (EWT and FWT) for October 2026 (all eFPS filers).\ne-Filing and e-Payment/Filing and payment of 1702 (ITR) and other required attachments for YE 31 July 2026.\ne-Filing and e-Payment/Filing and payment of 1707-A (CGT) for YE 31 July 2026.\nSubmission of bound loose-leaf books of accounts and other required documents for YE 31 October 2026 registered under loose-leaf.\nSubmission of notarized sworn declaration of new income recipients, availing of lower EWT rate or tax exemption, by withholding agents to the BIR for October 2026.\nSubmission to PEZA of AFS and ITR filed with the BIR on 15 October 2026 by PEZA-registered enterprises whose YE 30 June 2026.\nSubmission to PEZA/BOI of ATIR and ABR (Annexes A.1 to B.2) by PEZA/BOI-registered enterprises for YE 30 June 2026.\nSubmission to PEZA via ACMS of 1702Q (ITR) filed with the BIR on 30 October 2026 by PEZA-registered enterprises for QE 31 August 2026.\nRemittance of PHIC contributions for October 2026 by employers whose PEN ends in 0 to 4.\nRemittance of HDMF loan payments for October 2026."
+  },
+  {
+    "date": "2026-11-17",
+    "source": "PwC November calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-november-tax-calendar.html",
+    "details": "Submission of CETI application of RBEs to their IPAs for YE 31 October 2026."
+  },
+  {
+    "date": "2026-11-19",
+    "source": "PwC November calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-november-tax-calendar.html",
+    "details": "Remittance of HDMF contributions for October 2026 by employers whose names begin with letters E to L."
+  },
+  {
+    "date": "2026-11-20",
+    "source": "PwC November calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-november-tax-calendar.html",
+    "details": "Submission to PEZA of EZMPR by PEZA-registered enterprises for October 2026.\nRemittance of PHIC contributions for October 2026 by employers whose PEN ends in 5 to 9."
+  },
+  {
+    "date": "2026-11-24",
+    "source": "PwC November calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-november-tax-calendar.html",
+    "details": "Remittance of HDMF contributions for October 2026 by employers whose names begin with letters M to Q."
+  },
+  {
+    "date": "2026-11-25",
+    "source": "PwC November calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-november-tax-calendar.html",
+    "details": "e-Filing and e-Payment/Filing and payment of 2550Q (VAT) for QE 31 October 2026.\ne-Filing and e-Payment/Filing and payment of 2551Q (PT) for QE 31 October 2026.\ne-Filing and e-Payment of 2550-DS (VAT for NRDSPs) for QE 31 October 2026.\ne-Submission of SLSPI / Summary List of Local Sales for Non-VAT registered RBEs and SAWT for VAT credits for QE 31 October 2026 (non-eFPS filers).\ne-Submission of SAWT for VAT credits for QE 31 October 2026 (LTS & eFPS filers)."
+  },
+  {
+    "date": "2026-11-27",
+    "source": "PwC November calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-november-tax-calendar.html",
+    "details": "Submission of notarized sworn statement for the use of forex rates other than BAP published rates for FY ended 30 November 2027.\nRemittance of HDMF contributions for October 2026 by employers whose names begin with letters R to Z or numeral."
+  },
+  {
+    "date": "2026-12-01",
+    "source": "PwC December calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-december-tax-calendar.html",
+    "details": "Filing with the SEC of AFS for YE 31 July 2026 by corporations whose securities are not registered under the SRC/RSA.\nFiling with the SEC of AFS for YE 31 July 2026 by securities brokers.\ne-Filing and e-Payment/Filing and payment of 1702Q (ITR) for QE 30 September 2026.\nSubmission of attachments to the 1702 (ITR), together with 1709 (RPT Form), if applicable, for YE 31 July 2026 (e-filers).\nSubmission of RFC for YE 31 July 2026.\nSubmission of the SAWT for QE 30 September 2026.\nSubmission of soft copy of books of accounts and other required documents for YE 31 October 2026 registered under CAS.\nSubmission of Inventory Lists for YE 31 October 2026.\ne-Submission of SLSPI / Summary List of Local Sales for Non-VAT registered RBEs for QE 31 October 2026 (LTS & eFPS filers).\nSubmission to BOI of BOI Form S-1, AFS and ITR filed with the BIR on 16 November 2026 by BOI-registered enterprises whose YE 31 July 2026.\nRemittance of SSS contributions and loan payments for October 2026."
+  },
+  {
+    "date": "2026-12-07",
+    "source": "PwC December calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-december-tax-calendar.html",
+    "details": "e-Filing and e-Payment/Filing and payment of 2000 (DST) for November 2026."
+  },
+  {
+    "date": "2026-12-09",
+    "source": "PwC December calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-december-tax-calendar.html",
+    "details": "e-Submission of sales report using CRM/POS and/or other sales machine with TIN ending in even number for November 2026."
+  },
+  {
+    "date": "2026-12-10",
+    "source": "PwC December calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-december-tax-calendar.html",
+    "details": "Filing and payment of 1601-C (WTC) for November 2026 (non-eFPS filers).\nFiling and payment of 0619-E and 0619-F (EWT and FWT) for November 2026 (non-eFPS filers).\ne-Filing and e-Payment/Filing and payment of 1600 (VAT/PT withheld) for November 2026.\ne-Submission of sales report using CRM/POS and/or other sales machine with TIN ending in odd number for November 2026.\nIssuance of 2307 (Certificate of VAT/PT withheld) for November 2026."
+  },
+  {
+    "date": "2026-12-11",
+    "source": "PwC December calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-december-tax-calendar.html",
+    "details": "e-Filing of 1601-C (WTC) for November 2026 (Group E).\ne-Filing of 0619-E and 0619-F (EWT and FWT) for November 2026 (Group E)."
+  },
+  {
+    "date": "2026-12-14",
+    "source": "PwC December calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-december-tax-calendar.html",
+    "details": "Filing with the SEC of annual report for YE 31 August 2026 by corporations whose securities are registered under the SRC/RSA.\ne-Filing of 1601-C (WTC) for November 2026 (Groups B, C and D).\ne-Filing of 0619-E and 0619-F (EWT and FWT) for November 2026 (Groups B, C and D).\nRemittance of HDMF contributions for November 2026 by employers whose names begin with letters A to D."
+  },
+  {
+    "date": "2026-12-15",
+    "source": "PwC December calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-december-tax-calendar.html",
+    "details": "e-Filing of 1601-C (WTC) for November 2026 (Group A).\ne-Filing of 0619-E and 0619-F (EWT and FWT) for November 2026 (Group A).\ne-Payment of 1601-C (WTC) for November 2026 (all eFPS filers).\ne-Payment of 0619-E and 0619-F (EWT and FWT) for November 2026 (all eFPS filers).\ne-Filing and e-Payment/Filing and payment of 1702 (ITR) and other required attachments for YE 31 August 2026.\ne-Filing and e-Payment/Filing and payment of 1707-A (CGT) for YE 31 August 2026.\nSubmission of bound loose-leaf books of accounts and other required documents for YE 30 November 2026 registered under loose-leaf.\nSubmission of notarized sworn declaration of new income recipients, availing of lower EWT rate or tax exemption, by withholding agents to the BIR for November 2026.\nSubmission of CETI application of RBEs to their IPAs for YE 30 November 2026.\nRemittance of PHIC contributions for November 2026 by employers whose PEN ends in 0 to 4.\nRemittance of HDMF loan payments for November 2026."
+  },
+  {
+    "date": "2026-12-16",
+    "source": "PwC December calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-december-tax-calendar.html",
+    "details": "Submission to PEZA of AFS and ITR filed with the BIR on 16 November 2026 by PEZA-registered enterprises whose YE 31 July 2026.\nSubmission to PEZA/BOI of ATIR and ABR (Annexes A.1 to B.2) by PEZA/BOI-registered enterprises for YE 31 July 2026.\nSubmission to PEZA via ACMS of 1702Q (ITR) filed with the BIR on 01 December 2026 by PEZA-registered enterprises for QE 30 September 2026."
+  },
+  {
+    "date": "2026-12-18",
+    "source": "PwC December calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-december-tax-calendar.html",
+    "details": "Submission to PEZA of EZMPR by PEZA-registered enterprises for November 2026.\nRemittance of HDMF contributions for November 2026 by employers whose names begin with letters E to L."
+  },
+  {
+    "date": "2026-12-21",
+    "source": "PwC December calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-december-tax-calendar.html",
+    "details": "Remittance of PHIC contributions for November 2026 by employers whose PEN ends in 5 to 9."
+  },
+  {
+    "date": "2026-12-23",
+    "source": "PwC December calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-december-tax-calendar.html",
+    "details": "Remittance of HDMF contributions for November 2026 by employers whose names begin with letters M to Q."
+  },
+  {
+    "date": "2026-12-28",
+    "source": "PwC December calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-december-tax-calendar.html",
+    "details": "e-Filing and e-Payment/Filing and payment of 2550Q (VAT) for QE 30 November 2026.\ne-Filing and e-Payment/Filing and payment of 2551Q (PT) for QE 30 November 2026.\ne-Filing and e-Payment of 2550-DS (VAT for NRDSPs) for QE 30 November 2026.\ne-Submission of SLSPI / Summary List of Local Sales for Non-VAT registered RBEs and SAWT for VAT credits for QE 30 November 2026 (non-eFPS filers).\ne-Submission of SAWT for VAT credits for QE 30 November 2026 (LTS & eFPS filers)."
+  },
+  {
+    "date": "2026-12-29",
+    "source": "PwC December calendar",
+    "url": "https://www.pwc.com/ph/en/client-accounting-services/2026-tax-calendar/2026-december-tax-calendar.html",
+    "details": "Filing with the SEC of AFS for YE 31 August 2026 by corporations whose securities are not registered under the SRC/RSA.\nFiling with the SEC of AFS for YE 31 August 2026 by securities brokers.\nSubmission of notarized sworn statement for the use of forex rates other than BAP published rates for FY ended 31 December 2027.\nRemittance of HDMF contributions for November 2026 by employers whose names begin with letters R to Z or numeral."
+  }
+];

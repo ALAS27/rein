@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deadline Hub</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <aside class="sidebar" aria-label="App navigation">
+        <div class="brand">D</div>
+        <button class="nav-button active" title="Deadlines" aria-label="Deadlines" data-icon="circle-help"></button>
+        <button class="nav-button" title="Team" aria-label="Team" data-icon="users"></button>
+        <button class="nav-button" title="Reports" aria-label="Reports" data-icon="clipboard-list"></button>
+        <button class="nav-button" title="Settings" aria-label="Settings" data-icon="braces"></button>
+        <div class="nav-spacer"></div>
+        <button class="nav-button" title="Notifications" aria-label="Notifications" data-icon="bell"></button>
+        <button class="nav-button" title="Preferences" aria-label="Preferences" data-icon="settings"></button>
+        <div class="avatar">K</div>
+      </aside>
+
+      <section class="workspace">
+        <header class="topbar">
+          <div>
+            <h1>Deadline Control</h1>
+            <p>Tax, compliance, and admin reminders</p>
+          </div>
+          <button class="add-button" id="addNew"><span class="icon-text">+</span>Add new</button>
+        </header>
+
+        <section class="stats" aria-label="Deadline summary">
+          <article class="stat-card">
+            <span class="icon-text">D</span>
+            <strong id="totalCount">0</strong>
+            <span>Deadlines</span>
+          </article>
+          <article class="stat-card">
+            <span class="icon-text">W</span>
+            <strong id="weekCount">0</strong>
+            <span>Due this week</span>
+          </article>
+          <article class="stat-card">
+            <span class="icon-text">A</span>
+            <strong id="approvalCount">0</strong>
+            <span>For approval</span>
+          </article>
+          <article class="stat-card">
+            <span class="icon-text">OK</span>
+            <strong id="doneCount">0</strong>
+            <span>Done</span>
+          </article>
+        </section>
+
+        <section class="controls" aria-label="Filters">
+          <label class="search-box">
+            <span class="icon-text">S</span>
+            <input id="searchInput" type="search" placeholder="Search" />
+          </label>
+          <div class="view-toggle" aria-label="View options">
+            <button class="active"><span class="icon-text">L</span>List</button>
+            <button><span class="icon-text">G</span>Grid</button>
+          </div>
+        </section>
+
+        <section class="app-tabs" aria-label="Dashboard tabs">
+          <button class="active" data-panel-tab="deadlines"><span class="icon-text">T</span>Deadline tracker</button>
+          <button data-panel-tab="calendar"><span class="icon-text">C</span>Google Calendar</button>
+        </section>
+
+        <section class="sync-note" aria-label="Sync status">
+          <strong id="syncStatus">Firebase sync not configured.</strong>
+          <span> Connect Google to import calendar events and create new reminders.</span>
+          <div class="sync-actions">
+            <button id="connectGoogle" type="button">Connect Google</button>
+            <button id="syncCalendar" type="button">Sync Calendar</button>
+            <label><input id="autoSync" type="checkbox" /> Auto sync while open</label>
+          </div>
+        </section>
+
+        <section class="filters" aria-label="Filter chips">
+          <label class="filter-chip">
+            <span>Status:</span>
+            <select id="statusFilter">
+              <option value="All">All</option>
+              <option value="Done">Done</option>
+              <option value="Working">Working</option>
+              <option value="Incomplete">Incomplete</option>
+              <option value="Approval">Approval</option>
+            </select>
+          </label>
+          <label class="filter-chip">
+            <span>Month:</span>
+            <select id="monthFilter">
+              <option value="All">All</option>
+              <option value="2026-05">May 2026</option>
+              <option value="2026-06">June 2026</option>
+              <option value="2026-07">July 2026</option>
+              <option value="2026-08">August 2026</option>
+              <option value="2026-09">September 2026</option>
+              <option value="2026-10">October 2026</option>
+              <option value="2026-11">November 2026</option>
+              <option value="2026-12">December 2026</option>
+            </select>
+          </label>
+          <button class="clear-button" id="clearFilters"><span class="icon-text">x</span>Clear all</button>
+        </section>
+
+        <section class="table-card panel active" id="deadlinesPanel" aria-label="Deadline table">
+          <table>
+            <thead>
+              <tr>
+                <th>Deadline</th>
+                <th>Owner</th>
+                <th>Prepare</th>
+                <th>Status</th>
+                <th>Source</th>
+                <th>Tags</th>
+                <th aria-label="Actions"></th>
+              </tr>
+            </thead>
+            <tbody id="deadlineRows"></tbody>
+          </table>
+        </section>
+
+        <section class="calendar-panel panel" id="calendarPanel" aria-label="Google Calendar events">
+          <div class="calendar-head">
+            <div>
+              <h2>Google Calendar</h2>
+              <p><span id="calendarCount">0</span> events from May to December 2026</p>
+            </div>
+            <a class="calendar-open" href="https://calendar.google.com/calendar/u/0/r" target="_blank" rel="noopener noreferrer"><span class="icon-text">go</span>Open Calendar</a>
+          </div>
+          <div class="month-tabs" id="calendarMonthTabs" aria-label="Calendar months"></div>
+          <div class="calendar-list" id="calendarRows"></div>
+        </section>
+
+        <footer class="pager">
+          <label>
+            Show on page
+            <select id="pageSize">
+              <option>10</option>
+              <option selected>15</option>
+              <option>25</option>
+            </select>
+          </label>
+          <span><button id="prevPage" aria-label="Previous page">&lt;</button><strong>1</strong><button id="nextPage" aria-label="Next page">&gt;</button></span>
+        </footer>
+      </section>
+    </main>
+
+    <dialog id="editor">
+      <form method="dialog" class="editor-card">
+        <div class="editor-head">
+          <h2>Edit deadline</h2>
+          <button value="cancel" aria-label="Close">x</button>
+        </div>
+        <input type="hidden" id="editId" />
+        <label>
+          Requirement
+          <input id="editTitle" required />
+        </label>
+        <label>
+          Due date
+          <input id="editDate" type="date" required />
+        </label>
+        <label>
+          Status
+          <select id="editStatus">
+            <option>Done</option>
+            <option>Working</option>
+            <option>Incomplete</option>
+            <option>Approval</option>
+          </select>
+        </label>
+        <label>
+          Details
+          <textarea id="editDetails" rows="5"></textarea>
+        </label>
+        <div class="editor-actions">
+          <button value="cancel" class="ghost">Cancel</button>
+          <button id="saveEdit" value="default" class="save">Save</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="./tax-calendar-data.js"></script>
+    <script src="./script.js"></script>
+    <script src="./firebase-config.js"></script>
+    <script type="module" src="./firebase-sync.js"></script>
+  </body>
+</html>
